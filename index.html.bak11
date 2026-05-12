@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metonym — Clinical evaluation for AI suicide risk detection</title>
+  <meta name="description" content="Metonym is a patent-pending clinical methodology for evaluating how AI systems detect — or fail to detect — suicide risk in real conversations.">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Metonym — Clinical evaluation for AI suicide risk detection">
+  <meta property="og:description" content="Patent-pending clinical methodology for evaluating AI suicide risk detection systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metonym.health">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,450;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============== Header ============== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">Metonym<span class="mark">.</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="methodology.html">Methodology</a>
+        <a href="about.html">About</a>
+        <a href="#contact" class="nav-cta">Request Briefing</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============== Hero ============== -->
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Patent Pending · Clinical AI Safety Evaluation</p>
+      <h1>The clinically meaningful moments most AI systems miss.</h1>
+      <p class="lede hero-lede">
+        Metonym is a patent-pending clinical methodology for evaluating how AI systems detect — or fail to detect — suicide risk in real conversations. Built by a clinical psychologist with two decades of practice, for the systems mental health users now depend on.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Request a Clinical Briefing</a>
+        <a href="methodology.html" class="btn btn-secondary">See the Methodology</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Problem ============== -->
+  <section id="problem">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">The Problem</p>
+        <h2>AI mental health tools are deploying faster than clinical evaluation can keep up.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Millions of users now turn to AI chatbots and conversational agents during moments of acute distress. The systems answering them were not built with clinical evaluation embedded into their development pipeline — and the evidence is increasingly clear that they miss the moments that matter most.
+        </p>
+        <p>
+          Generic safety filters catch the obvious phrases. They routinely miss the subtler, clinically meaningful shifts that experienced clinicians recognize as escalating risk — decision-state transitions, narrowing of perceived options, temporal constriction, or the calm that follows a settled plan. The gap between "passes content moderation" and "would be recognized by a competent clinician" is where harm lives.
+        </p>
+        <p>
+          Regulatory pressure on AI mental health systems is building rapidly. Companies deploying these tools need evaluation that meets a clinical bar — not just a technical one.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Methodology summary ============== -->
+  <section id="methodology" class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">The Methodology</p>
+        <h2>A clinical framework for evaluating AI performance in suicide risk conversations.</h2>
+      </div>
+      <p class="lede" style="margin-bottom: 2em;">
+        Metonym combines two patent-pending frameworks that translate decades of clinical expertise into systematic, repeatable evaluation of AI behavior.
+      </p>
+
+      <div class="framework">
+        <div class="framework-card">
+          <p class="label">Framework 01</p>
+          <h3>Salient Distress Model (SDM)</h3>
+          <p>
+            A clinical model of how meaningful distress signals present in real conversations — and which signals are most often missed by general-purpose AI systems. SDM defines what an evaluator should be looking for, grounded in clinical practice rather than keyword heuristics.
+          </p>
+        </div>
+        <div class="framework-card">
+          <p class="label">Framework 02</p>
+          <h3>Mechanical Severity Score (MSS)</h3>
+          <p>
+            A structured scoring approach that converts clinical judgment into a reproducible measurement of how an AI system performs across a calibrated set of risk scenarios. MSS enables systematic comparison across systems, versions, and deployment configurations.
+          </p>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="stats">
+        <div class="stat">
+          <span class="num">1,700+</span>
+          <span class="lbl">AI model evaluations across multiple scenarios</span>
+        </div>
+        <div class="stat">
+          <span class="num">PsyD</span>
+          <span class="lbl">Clinical psychology authorship</span>
+        </div>
+        <div class="stat">
+          <span class="num">Pending</span>
+          <span class="lbl">US Provisional Patent filed May 2026</span>
+        </div>
+      </div>
+
+      <p style="margin-top: 2.5em;">
+        <a href="methodology.html" class="btn btn-secondary">Read the methodology overview &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Who it's for ============== -->
+  <section id="audience">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Who Metonym Serves</p>
+        <h2>Built for organizations whose AI systems may encounter users in crisis.</h2>
+      </div>
+      <ul class="audience-list">
+        <li>
+          <strong>Healthcare AI Companies</strong>
+          Independent clinical validation of suicide risk detection performance — pre-deployment, post-incident, or for ongoing safety assurance.
+        </li>
+        <li>
+          <strong>Regulatory & Standards Bodies</strong>
+          A clinical evaluation framework usable as a reference standard for assessing AI mental health safety claims.
+        </li>
+        <li>
+          <strong>Mental Health Technology Developers</strong>
+          A clinical lens applied to product testing — surfacing the false-negatives generic QA was never designed to catch.
+        </li>
+        <li>
+          <strong>Foundation Model Developers</strong>
+          Clinical evaluation of how base models handle high-acuity mental health conversations, before downstream fine-tuning.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============== About preview ============== -->
+  <section id="about-preview" class="alt">
+    <div class="container">
+      <div class="about-preview">
+        <img src="images/headshot.webp" alt="Dr. Laura L. Walsh" class="avatar-img">
+        <div>
+          <p class="eyebrow">About the Author</p>
+          <h2>Dr. Laura L. Walsh, PsyD</h2>
+          <p class="lede">
+            Licensed clinical psychologist with 20+ years of practice, developer of the Metonym methodology, and AI risk consultant working at the intersection of clinical psychology, forensic evaluation, and AI safety.
+          </p>
+          <p>
+            <a href="about.html" class="btn btn-secondary">Read the full bio &rarr;</a>
+            <a href="https://walshpsychology.com" class="btn btn-secondary" style="margin-left: 8px;" target="_blank" rel="noopener">Walsh Psychology &rarr;</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Contact ============== -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <p class="eyebrow">Get in Touch</p>
+          <h2>Request a clinical briefing.</h2>
+          <p>
+            Metonym engages selectively with healthcare AI companies, regulators, and mental health technology developers. Use the form to introduce your organization and the question you're trying to answer. We'll follow up within two business days.
+          </p>
+          <p class="muted" style="font-size: 0.92rem; margin-top: 1.5em;">
+            Inquiries from press and academic researchers welcome.
+          </p>
+        </div>
+
+        <!-- Contact form: swap YOUR_FORM_ID for real Formspree ID, see README -->
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="f-org">Organization</label>
+            <input type="text" id="f-org" name="organization">
+          </div>
+          <div class="field">
+            <label for="f-role">Role / Title</label>
+            <input type="text" id="f-role" name="role">
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="f-type">Inquiry type</label>
+            <select id="f-type" name="inquiry_type">
+              <option>Clinical audit pilot</option>
+              <option>Regulatory consultation</option>
+              <option>Methodology briefing</option>
+              <option>Press / Media</option>
+              <option>Academic collaboration</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" required placeholder="Briefly describe your organization and what you're trying to evaluate."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+          <p class="fallback">
+            Prefer email? Write to <a href="mailto:laura@walshpsychology.com?subject=Metonym%20Inquiry">laura@walshpsychology.com</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Footer ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-brand">Metonym<span style="color: var(--gold);">.</span></span>
+          <p class="footer-tag">
+            Patent-pending clinical methodology for evaluating AI suicide risk detection systems.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:laura@walshpsychology.com?subject=Metonym%20Inquiry">laura@walshpsychology.com</a></li>
+            <li><a href="https://walshpsychology.com" target="_blank" rel="noopener">walshpsychology.com</a></li>
+            <li>Trinidad, Colorado</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Metonym &middot; Metonym LLC &middot; All rights reserved.</span>
+        <span>Patent Pending &middot; US Provisional Application filed May 2026</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

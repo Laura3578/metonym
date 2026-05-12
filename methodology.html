@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methodology — Metonym</title>
+  <meta name="description" content="An overview of Metonym's patent-pending clinical methodology: the Salient Distress Model and the Mechanical Severity Score.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,450;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============== Header ============== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">Metonym<span class="mark">.</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="methodology.html">Methodology</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact" class="nav-cta">Request Briefing</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============== Page Hero ============== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Patent-Pending Methodology</p>
+      <h1>Clinical evaluation, made systematic.</h1>
+      <p class="lede" style="max-width: 60ch;">
+        Metonym translates clinical judgment about suicide risk into a reproducible evaluation framework — usable across AI systems, vendors, and deployment contexts.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Why this is needed ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Why a Clinical Approach</p>
+        <h2>The gap between technical safety and clinical safety.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Most AI safety evaluation for mental health applications relies on keyword detection, content moderation classifiers, or red-team prompts written by AI safety engineers. These methods catch a real and important subset of harmful outputs.
+        </p>
+        <p>
+          They are not, however, the same thing as clinical evaluation. A trained clinician evaluating a transcript does not ask "did the system block disallowed content?" — they ask whether the system <em>recognized what was happening</em>, and whether its response moved the user toward or away from safety. These are clinical questions, and they require clinical instruments.
+        </p>
+        <p>
+          Metonym is built around a single thesis: <strong>the most consequential failures of AI mental health systems are false negatives</strong> — moments where escalating risk was present, the system did not recognize it, and the conversation continued as if nothing had changed.
+        </p>
+
+        <h3 style="margin-top: 2em;">The high-risk states AI systems tend to misread</h3>
+        <p>The Salient Distress Model is organized around clinically established categories of risk that surface-feature systems routinely miss:</p>
+        <ul style="margin-bottom: 1.3em;">
+          <li><strong>Decision-state transitions</strong> — the shift from passive ideation to active planning, where risk escalates most rapidly.</li>
+          <li><strong>Collapse of perceived options</strong> — the moment a person's perceived solution space narrows to one. Language often remains calm even as risk is peaking.</li>
+          <li><strong>Temporal narrowing</strong> — constriction of future-thinking, a clinical marker that rarely surfaces in the vocabulary content moderators were trained on.</li>
+          <li><strong>Calm or resolved states</strong> — a sudden sense of peace can mask elevated risk and will reliably be scored as low-risk by any keyword-based system.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Frameworks ============== -->
+  <section class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Two Patent-Pending Frameworks</p>
+        <h2>Salient Distress Model and Mechanical Severity Score.</h2>
+      </div>
+
+      <div class="framework">
+        <div class="framework-card">
+          <p class="label">SDM</p>
+          <h3>Salient Distress Model</h3>
+          <p>
+            A clinical model of what makes a moment in a conversation clinically salient. SDM defines the categories of signal a competent evaluator should be looking for — including the subtler indicators of state transition that are easily missed by systems trained on surface features.
+          </p>
+          <p>
+            SDM is the answer to the question: <em>what should an evaluator notice?</em>
+          </p>
+        </div>
+        <div class="framework-card">
+          <p class="label">MSS</p>
+          <h3>Mechanical Severity Score</h3>
+          <p>
+            A structured scoring approach that operationalizes clinical judgment into a reproducible measurement. MSS lets multiple evaluators — and Metonym's internal scoring pipeline — produce comparable assessments across AI systems, model versions, and deployment configurations.
+          </p>
+          <p>
+            MSS is the answer to the question: <em>how do we measure it the same way every time?</em>
+          </p>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top: 2.5em; font-size: 0.9rem; max-width: 60ch;">
+        Specific calibration values, scoring weights, scenario contents, and rubric anchors are proprietary trade secrets and are not disclosed publicly. Metonym engagements operate under appropriate confidentiality terms.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== What an engagement looks like ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Engagement</p>
+        <h2>What a Metonym evaluation looks like.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Metonym engagements are designed to produce something a clinical, technical, and regulatory audience can each trust: a structured assessment of how an AI system performs against a calibrated set of clinically meaningful scenarios.
+        </p>
+        <p>
+          A typical engagement includes scoping aligned to the client's deployment context, evaluation against the SDM/MSS framework, and a written report identifying performance gaps and clinical recommendations. The methodology has been applied to <strong>over 1,700 AI model evaluations</strong> across multiple scenarios to date.
+        </p>
+        <p>
+          Engagements are intended to complement, not replace, the client's internal safety review — and to provide the kind of independent clinical assessment that regulators and ethics boards increasingly expect.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Patent / IP Note ============== -->
+  <section class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Intellectual Property</p>
+        <h2>Patent-pending status.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          The Metonym methodology — including the Salient Distress Model, the Mechanical Severity Score, and the underlying evaluation approach — is the subject of a US Provisional Patent Application filed in May 2026.
+        </p>
+        <p>
+          Public references to the methodology are limited to its named frameworks, conceptual structure, and high-level claims. The specific calibration, scoring formulas, and operational rubrics remain trade-secret protected and are disclosed only under appropriate confidentiality agreements during client engagements.
+        </p>
+      </div>
+
+      <p style="margin-top: 2em;">
+        <a href="index.html#contact" class="btn btn-primary">Request a Briefing</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Footer ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-brand">Metonym<span style="color: var(--gold);">.</span></span>
+          <p class="footer-tag">
+            Patent-pending clinical methodology for evaluating AI suicide risk detection systems.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:laura@walshpsychology.com?subject=Metonym%20Inquiry">laura@walshpsychology.com</a></li>
+            <li><a href="https://walshpsychology.com" target="_blank" rel="noopener">walshpsychology.com</a></li>
+            <li>Trinidad, Colorado</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Metonym LLC &middot; All rights reserved.</span>
+        <span>Patent Pending &middot; US Provisional Application filed May 2026</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
