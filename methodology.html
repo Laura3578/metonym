@@ -4,11 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Methodology — Metonym</title>
-  <meta name="description" content="An overview of Metonym's patent-pending clinical methodology: the Salient Distress Model and the Mechanical Severity Score.">
+  <meta name="description" content="The Metonym methodology pairs Walsh's openly published Salient Distress Model with a patent-pending Mechanical Severity Score for clinical evaluation of AI suicide risk detection.">
 
+  <meta property="og:title" content="Methodology — Metonym">
+  <meta property="og:description" content="Salient Distress Model and Mechanical Severity Score. The clinical framework behind Metonym evaluations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metonym.health/methodology.html">
+
+  <link rel="icon" type="image/svg+xml" href="images/metonym-favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,450;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,11 +22,14 @@
   <!-- ============== Header ============== -->
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">Metonym<span class="mark">.</span></a>
+      <a href="index.html" class="brand brand-logo" aria-label="Metonym home">
+        <img src="images/metonym-logo.svg" alt="Metonym — Clinical Intelligence for Safer AI">
+      </a>
       <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#services">Services</a>
         <a href="methodology.html">Methodology</a>
         <a href="about.html">About</a>
-        <a href="index.html#contact" class="nav-cta">Request Briefing</a>
+        <a href="index.html#contact" class="nav-cta">Book a Scoping Call</a>
       </nav>
     </div>
   </header>
@@ -33,11 +42,47 @@
       <p class="lede" style="max-width: 60ch;">
         Metonym translates clinical judgment about suicide risk into a reproducible evaluation framework — usable across AI systems, vendors, and deployment contexts.
       </p>
+      <p class="ip-line">
+        US Provisional Patent Application No. <strong>64/059,837</strong> · Filed 2026-05-07
+        <br>
+        Methodology preprint (not peer-reviewed): <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener"><strong>doi.org/10.5281/zenodo.20147000</strong></a> (Zenodo, CC-BY-NC 4.0)
+      </p>
     </div>
   </section>
 
-  <!-- ============== Why this is needed ============== -->
+  <!-- ============== What you receive (deliverables first) ============== -->
   <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">What an engagement produces</p>
+        <h2>The deliverable safety officers, GCs, and regulators can each trust.</h2>
+      </div>
+
+      <div class="prose">
+        <p>
+          A Metonym engagement produces a structured clinical assessment of how an AI system performs against a calibrated set of clinically meaningful scenarios. The methodology uses a three-tier rubric — operating at turn, run, and expert-review levels — with an independent Mechanical Severity Score (MSS) that triangulates the holistic rating and surfaces evaluator drift. It is designed to be read by three audiences at once: the engineering team that needs to fix things, the safety officer who needs to defend the program, and the regulator or court that needs evidence of due diligence.
+        </p>
+
+        <h3 style="margin-top: 1.8em;">What you receive</h3>
+        <ul class="deliverables">
+          <li><strong>Scoped scenario set</strong> — calibrated to your deployment context, drawn from the SDM-defined high-risk states</li>
+          <li><strong>Performance scoring</strong> using the Mechanical Severity Score across the agreed scenario set</li>
+          <li><strong>Identified false-negative patterns</strong> with worked examples showing what the system missed and what a clinician would have noticed</li>
+          <li><strong>Clinical recommendations</strong> for remediation, calibration, or design changes</li>
+          <li><strong>Executive summary</strong> suitable for board, regulator, or counsel</li>
+          <li><strong>Optional</strong> follow-on consult call to walk your team through findings</li>
+        </ul>
+      </div>
+
+      <div class="section-cta-bar">
+        <p class="cta-text">Want to know what a scoped engagement would look like for your system?</p>
+        <a href="index.html#contact" class="btn btn-primary">Book a Scoping Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Why this exists ============== -->
+  <section class="alt">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Why a Clinical Approach</p>
@@ -67,29 +112,29 @@
   </section>
 
   <!-- ============== Frameworks ============== -->
-  <section class="alt">
+  <section>
     <div class="container">
       <div class="section-header">
-        <p class="eyebrow">Two Patent-Pending Frameworks</p>
+        <p class="eyebrow">The Two Frameworks</p>
         <h2>Salient Distress Model and Mechanical Severity Score.</h2>
       </div>
 
       <div class="framework">
         <div class="framework-card">
-          <p class="label">SDM</p>
+          <p class="label">SDM · Clinical framework (openly published)</p>
           <h3>Salient Distress Model</h3>
           <p>
-            A clinical model of what makes a moment in a conversation clinically salient. SDM defines the categories of signal a competent evaluator should be looking for — including the subtler indicators of state transition that are easily missed by systems trained on surface features.
+            Walsh's clinical-theoretical framework defining what makes a moment in a conversation clinically salient. SDM organizes the categories of signal a competent evaluator should be looking for — including the subtler indicators of state transition that are easily missed by systems trained on surface features. Openly published in the Zenodo methodology preprint and citable by DOI.
           </p>
           <p>
             SDM is the answer to the question: <em>what should an evaluator notice?</em>
           </p>
         </div>
         <div class="framework-card">
-          <p class="label">MSS</p>
+          <p class="label">MSS · Patent-pending scoring procedure</p>
           <h3>Mechanical Severity Score</h3>
           <p>
-            A structured scoring approach that operationalizes clinical judgment into a reproducible measurement. MSS lets multiple evaluators — and Metonym's internal scoring pipeline — produce comparable assessments across AI systems, model versions, and deployment configurations.
+            A patent-pending structured scoring procedure that operationalizes clinical judgment into reproducible measurement. MSS lets multiple evaluators — and Metonym's internal scoring pipeline — produce comparable assessments across AI systems, model versions, and deployment configurations.
           </p>
           <p>
             MSS is the answer to the question: <em>how do we measure it the same way every time?</em>
@@ -103,29 +148,55 @@
     </div>
   </section>
 
-  <!-- ============== What an engagement looks like ============== -->
-  <section>
+  <!-- ============== Evidence base ============== -->
+  <section class="alt">
     <div class="container">
       <div class="section-header">
-        <p class="eyebrow">Engagement</p>
-        <h2>What a Metonym evaluation looks like.</h2>
+        <p class="eyebrow">Evidence Base</p>
+        <h2>Empirically grounded. Openly published. Citable.</h2>
       </div>
       <div class="prose">
         <p>
-          Metonym engagements are designed to produce something a clinical, technical, and regulatory audience can each trust: a structured assessment of how an AI system performs against a calibrated set of clinically meaningful scenarios.
+          The Metonym methodology has been applied to <strong>1,759 multi-turn AI evaluation runs (1,679 complete) across 31+ active models on 53 scenarios</strong>, comprising 2,644 reference-annotated marker turns. Across this corpus, <strong>57% of clinically meaningful moments received responses scored at or below the inadequate threshold</strong> for transition recognition — a range of 49% to 77% depending on rubric version.
         </p>
         <p>
-          A typical engagement includes scoping aligned to the client's deployment context, evaluation against the SDM/MSS framework, and a written report identifying performance gaps and clinical recommendations. The methodology has been applied to <strong>over 1,700 AI model evaluations</strong> across multiple scenarios to date.
+          This is not a theoretical proposal. It is a measured, replicable finding, published as a methodology preprint with citable DOI on Zenodo and licensed CC-BY-NC 4.0 for academic and non-commercial reference.
         </p>
-        <p>
-          Engagements are intended to complement, not replace, the client's internal safety review — and to provide the kind of independent clinical assessment that regulators and ethics boards increasingly expect.
+        <p class="ip-line">
+          <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener"><strong>Read the published preprint &rarr;</strong></a>
+          <br>
+          Walsh, L. L. (2026). <em>Evaluating Conversational AI Recognition of Clinically Meaningful State Transitions in Suicide-Risk Dialogue.</em> Zenodo. DOI 10.5281/zenodo.20147000.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ============== Patent / IP Note ============== -->
-  <section class="alt">
+  <!-- ============== Theoretical anchors ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Clinical Foundations</p>
+        <h2>Grounded in established suicidology, not improvised.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          The Metonym methodology integrates multiple validated clinical frameworks for understanding suicide risk — not a single homemade model. The published methodology paper cites these explicitly as theoretical anchors:
+        </p>
+        <ul class="deliverables">
+          <li><strong>Salient Distress Model of Suicide</strong> — the model defining which moments in a conversation are clinically salient</li>
+          <li><strong>Narrative-Crisis Model</strong> — how crisis state organizes and constricts narrative thought</li>
+          <li><strong>Three-Step Theory of Suicide</strong> (Klonsky & May) — pain, hopelessness, and connectedness as suicide pathway predictors</li>
+          <li><strong>Collaborative Assessment and Management of Suicidality (CAMS)</strong> — a clinical framework grounding the SDM's recognition criteria</li>
+        </ul>
+        <p>
+          This grounding is what distinguishes a clinical evaluation from a content-moderation audit: the framework asks the questions a competent clinician would ask, calibrated against models of how suicide risk actually presents and escalates.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== IP Status ============== -->
+  <section>
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Intellectual Property</p>
@@ -133,16 +204,23 @@
       </div>
       <div class="prose">
         <p>
-          The Metonym methodology — including the Salient Distress Model, the Mechanical Severity Score, and the underlying evaluation approach — is the subject of a US Provisional Patent Application filed in May 2026.
+          The patent-pending portion of Metonym — the Mechanical Severity Score scoring procedure, the multi-tier rubric architecture, the independent triangulation approach, and the integrated routing and review pipeline — is the subject of <strong>US Provisional Patent Application No. 64/059,837</strong>, filed 2026-05-07.
         </p>
         <p>
-          Public references to the methodology are limited to its named frameworks, conceptual structure, and high-level claims. The specific calibration, scoring formulas, and operational rubrics remain trade-secret protected and are disclosed only under appropriate confidentiality agreements during client engagements.
+          The Salient Distress Model (SDM) is Walsh's clinical-theoretical framework — published openly via the Zenodo methodology preprint, citable by DOI, and attributable through the scholarly record. It grounds the methodology's recognition criteria but is not itself a patented procedure.
+        </p>
+        <p>
+          Public references to the methodology are limited to its named frameworks, conceptual structure, and high-level claims. The specific calibration values, scoring weights, full rubric anchor language, and scenario content remain trade-secret protected and are disclosed only under appropriate confidentiality agreements during client engagements.
+        </p>
+        <p class="ip-line">
+          <strong>Methodology preprint (published):</strong> Walsh, L. L. (2026). <em>Evaluating Conversational AI Recognition of Clinically Meaningful State Transitions in Suicide-Risk Dialogue: A Multi-Tier Rubric Approach with Independent Mechanical Severity Triangulation.</em> Zenodo. <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20147000</a>
         </p>
       </div>
 
-      <p style="margin-top: 2em;">
-        <a href="index.html#contact" class="btn btn-primary">Request a Briefing</a>
-      </p>
+      <div class="section-cta-bar" style="margin-top: 2.5em;">
+        <p class="cta-text">If your AI system might encounter someone in crisis, it should be clinically evaluated.</p>
+        <a href="index.html#contact" class="btn btn-primary">Book a Scoping Call</a>
+      </div>
     </div>
   </section>
 
@@ -151,14 +229,20 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <span class="footer-brand">Metonym<span style="color: var(--gold);">.</span></span>
+          <img src="images/metonym-logo-dark.svg" alt="Metonym — Clinical Intelligence for Safer AI" class="footer-brand-logo">
           <p class="footer-tag">
             Patent-pending clinical methodology for evaluating AI suicide risk detection systems.
+          </p>
+          <p class="footer-tag" style="margin-top: 0.6em; font-size: 0.82rem;">
+            US Provisional Application No. 64/059,837 · Filed 2026-05-07
+            <br>
+            Methodology preprint: <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener" style="color: rgba(247,243,236,0.8);">doi.org/10.5281/zenodo.20147000</a>
           </p>
         </div>
         <div class="footer-col">
           <h4>Site</h4>
           <ul>
+            <li><a href="index.html#services">Services</a></li>
             <li><a href="methodology.html">Methodology</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="index.html#contact">Contact</a></li>
@@ -167,15 +251,15 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <ul>
-            <li><a href="mailto:laura@walshpsychology.com?subject=Metonym%20Inquiry">laura@walshpsychology.com</a></li>
-            <li><a href="https://walshpsychology.com" target="_blank" rel="noopener">walshpsychology.com</a></li>
+            <li><a href="mailto:laura@metonym.health?subject=Metonym%20Inquiry">laura@metonym.health</a></li>
             <li>Trinidad, Colorado</li>
+            <li style="margin-top: 8px;"><a href="https://walshpsychology.com" target="_blank" rel="noopener" style="font-size: 0.82rem; color: rgba(247,243,236,0.55);">Founder also operates Walsh Psychology</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Metonym LLC &middot; All rights reserved.</span>
-        <span>Patent Pending &middot; US Provisional Application filed May 2026</span>
+        <span>&copy; 2026 Metonym LLC · All rights reserved.</span>
+        <span>Patent Pending · US Provisional Application 64/059,837</span>
       </div>
     </div>
   </footer>

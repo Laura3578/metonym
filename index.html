@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Metonym — Clinical evaluation for AI suicide risk detection</title>
-  <meta name="description" content="Metonym is a patent-pending clinical methodology for evaluating how AI systems detect — or fail to detect — suicide risk in real conversations.">
+  <meta name="description" content="Metonym is a patent-pending clinical methodology for evaluating how AI systems detect — or fail to detect — suicide risk. Independent clinical audit, red-team, safety design, and expert review for AI mental health systems.">
   <meta name="robots" content="index,follow">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Metonym — Clinical evaluation for AI suicide risk detection">
-  <meta property="og:description" content="Patent-pending clinical methodology for evaluating AI suicide risk detection systems.">
+  <meta property="og:description" content="Patent-pending clinical methodology for evaluating AI suicide risk detection systems. Clinical audit, red team, safety design, and expert review.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://metonym.health">
 
+  <link rel="icon" type="image/svg+xml" href="images/metonym-favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,450;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,11 +24,14 @@
   <!-- ============== Header ============== -->
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">Metonym<span class="mark">.</span></a>
+      <a href="index.html" class="brand brand-logo" aria-label="Metonym home">
+        <img src="images/metonym-logo.svg" alt="Metonym — Clinical Intelligence for Safer AI">
+      </a>
       <nav class="nav-links" aria-label="Primary">
+        <a href="#services">Services</a>
         <a href="methodology.html">Methodology</a>
         <a href="about.html">About</a>
-        <a href="#contact" class="nav-cta">Request Briefing</a>
+        <a href="#contact" class="nav-cta">Book a Scoping Call</a>
       </nav>
     </div>
   </header>
@@ -35,135 +39,310 @@
   <!-- ============== Hero ============== -->
   <section class="hero">
     <div class="container">
-      <p class="eyebrow">Patent Pending · Clinical AI Safety Evaluation</p>
-      <h1>The clinically meaningful moments most AI systems miss.</h1>
+      <span class="hero-tag">Patent-Pending · Clinical AI Safety Evaluation</span>
+      <h1>Find the suicide risk your AI is missing — before someone else does.</h1>
       <p class="lede hero-lede">
-        Metonym is a patent-pending clinical methodology for evaluating how AI systems detect — or fail to detect — suicide risk in real conversations. Built by a clinical psychologist with two decades of practice, for the systems mental health users now depend on.
+        Metonym is a patent-pending clinical evaluation framework for AI systems that talk to people in crisis. In <strong>1,759 multi-turn evaluations across 31+ AI models on 53 scenarios</strong>, <strong>57% of clinically meaningful moments received responses scored as inadequately recognized</strong>. Methodology preprint published on Zenodo with citable DOI.
       </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Request a Clinical Briefing</a>
-        <a href="methodology.html" class="btn btn-secondary">See the Methodology</a>
+        <a href="#contact" class="btn btn-primary">Book a 30-Min Scoping Call</a>
+        <a href="#services" class="btn btn-secondary">See What We Do</a>
+      </div>
+      <p class="ip-line">
+        US Provisional Patent Application No. <strong>64/059,837</strong> · Filed 2026-05-07
+        <br>
+        Methodology preprint: <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener">doi.org/10.5281/zenodo.20147000</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Why Now (buyer triggers) ============== -->
+  <section class="why-now" id="why-now">
+    <div class="container">
+      <p class="eyebrow">Why this matters now</p>
+      <h2>The window of unaccountable AI mental health deployment is closing.</h2>
+      <p class="lede" style="max-width: 60ch;">
+        AI systems are talking to people in acute distress every day. The accountability layer is catching up, fast. Companies without independent clinical evaluation will be the cautionary tales.
+      </p>
+
+      <div class="triggers">
+        <div class="trigger">
+          <h3>Regulatory pressure</h3>
+          <p>
+            State legislation is moving beyond technical safety into clinical standards for AI systems that interact with mental health users. Federal scrutiny on digital health AI is rising. The companies that document independent clinical evaluation now will be the ones still operating when the rules tighten.
+          </p>
+        </div>
+        <div class="trigger">
+          <h3>Litigation precedent</h3>
+          <p>
+            Wrongful-death actions against AI chatbot companies have established a discovery pattern: if your system has interacted with users in crisis, you will be asked to produce evidence of how it was clinically evaluated. "We had safety filters" is not the answer that holds up.
+          </p>
+        </div>
+        <div class="trigger">
+          <h3>Brand exposure</h3>
+          <p>
+            A single high-profile incident in mental health is the fastest brand-collapse vector in AI. Boards have not yet uniformly asked "have we been clinically evaluated?" — but they will. Be the team that already has the answer.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============== Problem ============== -->
-  <section id="problem">
+  <!-- ============== Services ============== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">What we do</p>
+        <h2>Four engagement models, matched to where you are.</h2>
+        <p class="lede" style="margin-top: 0.6em;">
+          Every engagement is led by Dr. Laura L. Walsh, PsyD. Scope, deliverables, and timeline are confirmed before any work begins.
+        </p>
+      </div>
+
+      <div class="services">
+        <article class="service-card">
+          <p class="service-num">01</p>
+          <h3>Clinical Risk Review</h3>
+          <p class="service-tag">Fixed-scope audit of how your system handles suicide risk in real conversations.</p>
+          <ul>
+            <li>Review of 25–50 interactions or scenarios against the SDM/MSS framework</li>
+            <li>Identification of missed risk and false reassurance patterns</li>
+            <li>Performance-gap analysis with worked examples</li>
+            <li>Written report (3–5 pages) plus optional consult call</li>
+          </ul>
+          <div class="best-for">
+            <strong>Best for</strong>
+            Pre-deployment validation, post-incident analysis, or ongoing safety assurance.
+          </div>
+        </article>
+
+        <article class="service-card">
+          <p class="service-num">02</p>
+          <h3>Failure-Mode & Red Team</h3>
+          <p class="service-tag">Find where your system breaks under real psychological conditions.</p>
+          <ul>
+            <li>Scenario-based stress testing across high-risk and edge-case states</li>
+            <li>Identification of vulnerability and misclassification patterns</li>
+            <li>Worked examples of high-risk misses with clinical explanation</li>
+            <li>Targeted recommendations for safety remediation</li>
+          </ul>
+          <div class="best-for">
+            <strong>Best for</strong>
+            Launch readiness, scale-up safety review, regulatory preparation.
+          </div>
+        </article>
+
+        <article class="service-card">
+          <p class="service-num">03</p>
+          <h3>Safety Design & Co-Design Advisory</h3>
+          <p class="service-tag">Embedded clinical advisor working with your product and safety teams.</p>
+          <ul>
+            <li>Response-strategy and escalation-logic calibration</li>
+            <li>Reduction of false positives and false negatives at the decision-state level</li>
+            <li>System design for real-world transition risk (passive ideation → active planning, etc.)</li>
+            <li>Ongoing review of model behavior changes across releases</li>
+          </ul>
+          <div class="best-for">
+            <strong>Best for</strong>
+            Teams building or recalibrating AI mental health features — clinical perspective at design time, not just at audit time.
+          </div>
+        </article>
+
+        <article class="service-card">
+          <p class="service-num">04</p>
+          <h3>Expert Review & Incident Analysis</h3>
+          <p class="service-tag">Forensic-grade analysis when something has already gone wrong.</p>
+          <ul>
+            <li>Transcript and system-behavior analysis under appropriate confidentiality</li>
+            <li>Identification of missed or misinterpreted clinical signal</li>
+            <li>Opinion on foreseeability and failure points</li>
+            <li>Consultation and expert testimony as needed</li>
+          </ul>
+          <div class="best-for">
+            <strong>Best for</strong>
+            Incident response, regulatory inquiry, litigation support.
+          </div>
+        </article>
+      </div>
+
+      <div class="section-cta-bar">
+        <p class="cta-text">Not sure which engagement fits? A 30-min scoping call clarifies it fast.</p>
+        <a href="#contact" class="btn btn-primary">Book a Scoping Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== The Problem ============== -->
+  <section id="problem" class="alt">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">The Problem</p>
-        <h2>AI mental health tools are deploying faster than clinical evaluation can keep up.</h2>
+        <h2>Generic AI safety catches the wrong thing.</h2>
       </div>
       <div class="prose">
         <p>
-          Millions of users now turn to AI chatbots and conversational agents during moments of acute distress. The systems answering them were not built with clinical evaluation embedded into their development pipeline — and the evidence is increasingly clear that they miss the moments that matter most.
+          Most AI safety tooling for mental health was built by engineers, validated by engineers, and audited by engineers. It catches the obvious phrases — explicit ideation, named methods, profanity — and reports a passing score.
         </p>
         <p>
-          Generic safety filters catch the obvious phrases. They routinely miss the subtler, clinically meaningful shifts that experienced clinicians recognize as escalating risk — decision-state transitions, narrowing of perceived options, temporal constriction, or the calm that follows a settled plan. The gap between "passes content moderation" and "would be recognized by a competent clinician" is where harm lives.
+          That is not the same as clinical safety. The most consequential failures of AI mental health systems are <strong>false negatives</strong> — moments where escalating risk was present, the system did not recognize it, and the conversation continued as if nothing had changed. These are the moments that produce wrongful-death lawsuits, regulatory inquiries, and front-page stories.
         </p>
         <p>
-          Regulatory pressure on AI mental health systems is building rapidly. Companies deploying these tools need evaluation that meets a clinical bar — not just a technical one.
+          The clinically meaningful signals AI systems most often miss — decision-state transitions, collapse of perceived options, temporal narrowing, the calm that follows a settled plan — don't surface in the vocabulary that content moderators were trained on. They require clinical instruments.
         </p>
       </div>
     </div>
   </section>
 
   <!-- ============== Methodology summary ============== -->
-  <section id="methodology" class="alt">
+  <section id="methodology">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">The Methodology</p>
-        <h2>A clinical framework for evaluating AI performance in suicide risk conversations.</h2>
+        <h2>Salient Distress Model + Mechanical Severity Score.</h2>
+        <p class="lede" style="margin-top: 0.6em;">
+          A clinical model of what to look for, paired with a patent-pending scoring procedure that turns clinical judgment into reproducible measurement of AI behavior.
+        </p>
       </div>
-      <p class="lede" style="margin-bottom: 2em;">
-        Metonym combines two patent-pending frameworks that translate decades of clinical expertise into systematic, repeatable evaluation of AI behavior.
-      </p>
 
       <div class="framework">
         <div class="framework-card">
-          <p class="label">Framework 01</p>
-          <h3>Salient Distress Model (SDM)</h3>
+          <p class="label">SDM</p>
+          <h3>Salient Distress Model</h3>
           <p>
-            A clinical model of how meaningful distress signals present in real conversations — and which signals are most often missed by general-purpose AI systems. SDM defines what an evaluator should be looking for, grounded in clinical practice rather than keyword heuristics.
+            Walsh's clinical framework defining which signals a competent evaluator should be looking for — including the subtler indicators of state transition that surface-feature systems miss. Openly published via the Zenodo preprint. <em>What should an evaluator notice?</em>
           </p>
         </div>
         <div class="framework-card">
-          <p class="label">Framework 02</p>
-          <h3>Mechanical Severity Score (MSS)</h3>
+          <p class="label">MSS</p>
+          <h3>Mechanical Severity Score</h3>
           <p>
-            A structured scoring approach that converts clinical judgment into a reproducible measurement of how an AI system performs across a calibrated set of risk scenarios. MSS enables systematic comparison across systems, versions, and deployment configurations.
+            A patent-pending structured scoring procedure that operationalizes clinical judgment into reproducible measurement across systems, model versions, and deployment configurations. <em>How do we measure it the same way every time?</em>
           </p>
         </div>
       </div>
 
-      <hr class="divider">
-
-      <div class="stats">
-        <div class="stat">
-          <span class="num">1,700+</span>
-          <span class="lbl">AI model evaluations across multiple scenarios</span>
-        </div>
-        <div class="stat">
-          <span class="num">PsyD</span>
-          <span class="lbl">Clinical psychology authorship</span>
-        </div>
-        <div class="stat">
-          <span class="num">Pending</span>
-          <span class="lbl">US Provisional Patent filed May 2026</span>
-        </div>
-      </div>
-
-      <p style="margin-top: 2.5em;">
-        <a href="methodology.html" class="btn btn-secondary">Read the methodology overview &rarr;</a>
+      <p style="margin-top: 2em;">
+        <a href="methodology.html" class="btn btn-secondary">Read the full methodology &rarr;</a>
       </p>
     </div>
   </section>
 
-  <!-- ============== Who it's for ============== -->
-  <section id="audience">
+  <!-- ============== Differentiation ============== -->
+  <section class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">What sets Metonym apart</p>
+        <h2>Clinical at the core. Not a content-moderation add-on.</h2>
+      </div>
+
+      <div class="diff-list">
+        <div class="diff-item">
+          <h3>Built by a clinician, not an engineer</h3>
+          <p>Most AI safety tooling is built by AI safety engineers. Metonym is built by a clinical psychologist with two decades in practice — including forensic suicide-risk evaluation in legal contexts.</p>
+        </div>
+        <div class="diff-item">
+          <h3>Named, replicable frameworks</h3>
+          <p>The MSS scoring procedure is patent-pending (US Provisional 64/059,837); the SDM is Walsh's clinical framework, openly published via the Zenodo preprint and citable by DOI. Together they operationalize clinical judgment into reproducible scoring across systems and versions. Not vibes-based audit. Not a one-time consultant memo.</p>
+        </div>
+        <div class="diff-item">
+          <h3>Real evidence base, openly cited</h3>
+          <p>1,759 multi-turn evaluations across 31+ models. Methodology <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener">preprint published on Zenodo</a> with citable DOI 10.5281/zenodo.20147000 (not peer-reviewed; journal submission to follow). Grounded in established clinical frameworks: the Salient Distress Model of Suicide, the Narrative-Crisis Model, the Three-Step Theory of Suicide, and CAMS.</p>
+        </div>
+        <div class="diff-item">
+          <h3>Principal accountability</h3>
+          <p>Every engagement is led personally by the founder. No vendor-managed associates auditing your most sensitive product. The clinician who designed the framework is the clinician who reviews your system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Stats ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">By the numbers</p>
+        <h2>The evidence behind the framework.</h2>
+      </div>
+
+      <div class="big-stats">
+        <div class="big-stat">
+          <span class="num">57<span class="small">%</span></span>
+          <span class="lbl">of clinically meaningful moments received responses scored as <em>inadequately recognized</em> by the AI systems tested (combined rate; range 49–77% by rubric version)</span>
+        </div>
+        <div class="big-stat">
+          <span class="num">1,759</span>
+          <span class="lbl">Multi-turn AI evaluation runs across 31+ active models on 53 scenarios — 2,644 reference-annotated marker turns</span>
+        </div>
+        <div class="big-stat">
+          <span class="num">20<span class="small">+ yrs</span></span>
+          <span class="lbl">Clinical psychology practice — including forensic suicide-risk evaluation</span>
+        </div>
+      </div>
+
+      <p class="ip-line" style="margin-top: 2.5em;">
+        Source: <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener">Walsh, L. L. (2026), Zenodo, DOI 10.5281/zenodo.20147000</a> · Methodology preprint (CC-BY-NC 4.0; not peer-reviewed)
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Who we serve ============== -->
+  <section class="alt">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Who Metonym Serves</p>
-        <h2>Built for organizations whose AI systems may encounter users in crisis.</h2>
+        <h2>Organizations whose AI systems may encounter users in crisis.</h2>
       </div>
       <ul class="audience-list">
         <li>
-          <strong>Healthcare AI Companies</strong>
-          Independent clinical validation of suicide risk detection performance — pre-deployment, post-incident, or for ongoing safety assurance.
-        </li>
-        <li>
-          <strong>Regulatory & Standards Bodies</strong>
-          A clinical evaluation framework usable as a reference standard for assessing AI mental health safety claims.
-        </li>
-        <li>
-          <strong>Mental Health Technology Developers</strong>
-          A clinical lens applied to product testing — surfacing the false-negatives generic QA was never designed to catch.
+          <strong>Healthcare AI & Mental Health Tech</strong>
+          Independent clinical validation pre-deployment, post-incident, or for ongoing safety assurance.
         </li>
         <li>
           <strong>Foundation Model Developers</strong>
           Clinical evaluation of how base models handle high-acuity mental health conversations, before downstream fine-tuning.
+        </li>
+        <li>
+          <strong>Regulators & Standards Bodies</strong>
+          A clinical framework usable as a reference standard for assessing AI mental health safety claims.
+        </li>
+        <li>
+          <strong>General Counsel & Risk</strong>
+          Clinical defensibility, foreseeability analysis, and expert review for incident response or litigation support.
         </li>
       </ul>
     </div>
   </section>
 
   <!-- ============== About preview ============== -->
-  <section id="about-preview" class="alt">
+  <section id="about-preview">
     <div class="container">
       <div class="about-preview">
         <img src="images/headshot.webp" alt="Dr. Laura L. Walsh" class="avatar-img">
         <div>
-          <p class="eyebrow">About the Author</p>
+          <p class="eyebrow">Founder</p>
           <h2>Dr. Laura L. Walsh, PsyD</h2>
           <p class="lede">
-            Licensed clinical psychologist with 20+ years of practice, developer of the Metonym methodology, and AI risk consultant working at the intersection of clinical psychology, forensic evaluation, and AI safety.
+            Founder of Metonym LLC. Licensed clinical psychologist with 20+ years of practice. Developer of the patent-pending Metonym methodology, working at the intersection of clinical psychology, forensic evaluation, and AI safety.
           </p>
           <p>
             <a href="about.html" class="btn btn-secondary">Read the full bio &rarr;</a>
-            <a href="https://walshpsychology.com" class="btn btn-secondary" style="margin-left: 8px;" target="_blank" rel="noopener">Walsh Psychology &rarr;</a>
           </p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============== Pre-footer CTA band ============== -->
+  <section class="footer-cta">
+    <div class="container">
+      <p class="eyebrow">Get in Touch</p>
+      <h2>If your AI system might encounter someone in crisis, it should be clinically evaluated.</h2>
+      <p class="lede">
+        Metonym engages selectively. A 30-minute scoping call clarifies scope, fit, and engagement model before any work begins.
+      </p>
+      <p>
+        <a href="#contact" class="btn btn-primary">Book a 30-Min Scoping Call</a>
+      </p>
     </div>
   </section>
 
@@ -172,13 +351,13 @@
     <div class="container">
       <div class="contact-grid">
         <div>
-          <p class="eyebrow">Get in Touch</p>
-          <h2>Request a clinical briefing.</h2>
+          <p class="eyebrow">Talk to Metonym</p>
+          <h2>Tell us what you're trying to evaluate.</h2>
           <p>
-            Metonym engages selectively with healthcare AI companies, regulators, and mental health technology developers. Use the form to introduce your organization and the question you're trying to answer. We'll follow up within two business days.
+            Use the form to introduce your organization and the question you're working on. Replies within two business days.
           </p>
           <p class="muted" style="font-size: 0.92rem; margin-top: 1.5em;">
-            Inquiries from press and academic researchers welcome.
+            For press, media, and academic collaboration inquiries, write to <a href="mailto:laura@metonym.health?subject=Press%20%2F%20Academic%20Inquiry">laura@metonym.health</a> with "Press" or "Academic" in the subject line.
           </p>
         </div>
 
@@ -205,23 +384,22 @@
             <input type="email" id="f-email" name="email" required>
           </div>
           <div class="field">
-            <label for="f-type">Inquiry type</label>
+            <label for="f-type">What are you considering?</label>
             <select id="f-type" name="inquiry_type">
-              <option>Clinical audit pilot</option>
-              <option>Regulatory consultation</option>
-              <option>Methodology briefing</option>
-              <option>Press / Media</option>
-              <option>Academic collaboration</option>
-              <option>Other</option>
+              <option>Clinical Risk Review</option>
+              <option>Failure-Mode & Red Team</option>
+              <option>Safety Design & Co-Design Advisory</option>
+              <option>Expert Review & Incident Analysis</option>
+              <option>Not sure yet — scoping call</option>
             </select>
           </div>
           <div class="field">
-            <label for="f-msg">Message</label>
-            <textarea id="f-msg" name="message" required placeholder="Briefly describe your organization and what you're trying to evaluate."></textarea>
+            <label for="f-msg">Briefly describe your system and what you're trying to evaluate.</label>
+            <textarea id="f-msg" name="message" required placeholder="What does your AI system do? Who interacts with it? What question are you trying to answer about its clinical safety?"></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
           <p class="fallback">
-            Prefer email? Write to <a href="mailto:laura@walshpsychology.com?subject=Metonym%20Inquiry">laura@walshpsychology.com</a>.
+            Prefer email? Write to <a href="mailto:laura@metonym.health?subject=Metonym%20Inquiry">laura@metonym.health</a>.
           </p>
         </form>
       </div>
@@ -233,14 +411,20 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <span class="footer-brand">Metonym<span style="color: var(--gold);">.</span></span>
+          <img src="images/metonym-logo-dark.svg" alt="Metonym — Clinical Intelligence for Safer AI" class="footer-brand-logo">
           <p class="footer-tag">
             Patent-pending clinical methodology for evaluating AI suicide risk detection systems.
+          </p>
+          <p class="footer-tag" style="margin-top: 0.6em; font-size: 0.82rem;">
+            US Provisional Application No. 64/059,837 · Filed 2026-05-07
+            <br>
+            Methodology preprint: <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener" style="color: rgba(247,243,236,0.8);">doi.org/10.5281/zenodo.20147000</a>
           </p>
         </div>
         <div class="footer-col">
           <h4>Site</h4>
           <ul>
+            <li><a href="#services">Services</a></li>
             <li><a href="methodology.html">Methodology</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -249,15 +433,15 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <ul>
-            <li><a href="mailto:laura@walshpsychology.com?subject=Metonym%20Inquiry">laura@walshpsychology.com</a></li>
-            <li><a href="https://walshpsychology.com" target="_blank" rel="noopener">walshpsychology.com</a></li>
+            <li><a href="mailto:laura@metonym.health?subject=Metonym%20Inquiry">laura@metonym.health</a></li>
             <li>Trinidad, Colorado</li>
+            <li style="margin-top: 8px;"><a href="https://walshpsychology.com" target="_blank" rel="noopener" style="font-size: 0.82rem; color: rgba(247,243,236,0.55);">Founder also operates Walsh Psychology</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Metonym LLC &middot; All rights reserved.</span>
-        <span>Patent Pending &middot; US Provisional Application filed May 2026</span>
+        <span>&copy; 2026 Metonym LLC · All rights reserved.</span>
+        <span>Patent Pending · US Provisional Application 64/059,837</span>
       </div>
     </div>
   </footer>

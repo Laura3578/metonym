@@ -9,8 +9,8 @@
   --navy:         #0F2A44;
   --navy-deep:    #0A1D30;
   --navy-soft:    #1F3A57;
-  --ivory:        #F7F3EC;
-  --cream:        #FCFAF4;
+  --ivory:        #F4F5F3;
+  --cream:        #FAFAF8;
   --gold:         #B89548;
   --gold-deep:    #9C7C36;
   --gray:         #6B7280;
@@ -20,7 +20,8 @@
   --white:        #FFFFFF;
 
   /* Type scale */
-  --font-serif:   'Fraunces', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  /* (--font-serif name kept for legacy class refs; now points at Manrope display sans) */
+  --font-serif:   'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Spacing */
@@ -45,15 +46,15 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--navy);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   margin: 0 0 0.5em;
-  line-height: 1.15;
+  line-height: 1.18;
 }
-h1 { font-size: clamp(2.2rem, 4.8vw, 3.6rem); font-weight: 450; }
-h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
-h3 { font-size: 1.3rem; }
+h1 { font-size: clamp(2.2rem, 4.8vw, 3.6rem); font-weight: 700; letter-spacing: -0.03em; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 700; }
+h3 { font-size: 1.3rem; font-weight: 600; }
 p  { margin: 0 0 1.1em; }
 
 a {
@@ -77,9 +78,10 @@ a:hover { color: var(--gold-deep); }
 
 .lede {
   font-family: var(--font-serif);
-  font-weight: 400;
+  font-weight: 500;
   font-size: clamp(1.15rem, 1.8vw, 1.4rem);
-  line-height: 1.55;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
   color: var(--navy-soft);
   max-width: var(--max-prose);
 }
@@ -110,10 +112,23 @@ a:hover { color: var(--gold-deep); }
 .brand {
   font-family: var(--font-serif);
   font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--navy);
   text-decoration: none;
+}
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+.brand-logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 720px) {
+  .brand-logo img { height: 36px; }
 }
 .brand .mark { color: var(--gold-deep); }
 .nav-links { display: flex; gap: 28px; align-items: center; }
@@ -405,9 +420,18 @@ section.alt {
 .footer-brand {
   font-family: var(--font-serif);
   font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--ivory);
   margin-bottom: 12px;
   display: block;
+}
+.footer-brand-logo {
+  display: block;
+  height: 64px;
+  width: auto;
+  margin-bottom: 14px;
+  max-width: 100%;
 }
 .footer-tag {
   color: rgba(247, 243, 236, 0.6);
@@ -458,4 +482,278 @@ section.alt {
   .nav-links { gap: 14px; }
   .nav-links a:not(.nav-cta) { display: none; }
   .nav-links .nav-cta { padding: 8px 14px; font-size: 0.88rem; }
+}
+
+/* =========================================================
+   v03 ADDITIONS — sales-site components
+   ========================================================= */
+
+/* ---------- Big stat treatment (hero numbers) ---------- */
+.big-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+.big-stat {
+  border-top: 2px solid var(--gold);
+  padding-top: 18px;
+}
+.big-stat .num {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
+  color: var(--navy);
+  display: block;
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -0.03em;
+}
+.big-stat .num .small {
+  font-size: 0.55em;
+  color: var(--navy-soft);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.big-stat .lbl {
+  font-size: 0.95rem;
+  color: var(--navy-soft);
+  line-height: 1.4;
+}
+
+/* ---------- Why Now (buyer triggers) ---------- */
+.why-now {
+  background: var(--navy);
+  color: var(--ivory);
+}
+.why-now h2,
+.why-now h3 { color: var(--ivory); }
+.why-now .eyebrow { color: var(--gold); }
+.why-now .lede { color: rgba(247, 243, 236, 0.9); }
+.triggers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: 2.5em;
+}
+.trigger {
+  border-top: 2px solid var(--gold);
+  padding-top: 22px;
+}
+.trigger h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.6em;
+}
+.trigger p {
+  color: rgba(247, 243, 236, 0.78);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* ---------- Services grid ---------- */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 2em;
+}
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px -20px rgba(15, 42, 68, 0.22);
+  border-color: var(--gold);
+}
+.service-card .service-num {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 500;
+  margin-bottom: 0.8em;
+}
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5em;
+}
+.service-card .service-tag {
+  font-style: italic;
+  color: var(--navy-soft);
+  font-size: 0.92rem;
+  margin-bottom: 1.2em;
+}
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.4em;
+  font-size: 0.93rem;
+  color: var(--navy-deep);
+}
+.service-card ul li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+}
+.service-card ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold-deep);
+  font-weight: 600;
+}
+.service-card .best-for {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-soft);
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+.service-card .best-for strong {
+  color: var(--navy);
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ---------- Differentiation block ---------- */
+.diff-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 1.5em;
+}
+.diff-item {
+  padding: 0;
+}
+.diff-item h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 1.05rem;
+  margin-bottom: 0.5em;
+  color: var(--navy);
+}
+.diff-item h3::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+.diff-item p {
+  font-size: 0.95rem;
+  color: var(--navy-soft);
+  margin-bottom: 0;
+}
+
+/* ---------- Deliverables list (checkmarks) ---------- */
+.deliverables {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 1.5em;
+}
+.deliverables li {
+  position: relative;
+  padding: 12px 0 12px 32px;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 0.97rem;
+}
+.deliverables li:last-child { border-bottom: none; }
+.deliverables li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: var(--gold-deep);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ---------- Section CTA bar ---------- */
+.section-cta-bar {
+  margin-top: 2.5em;
+  padding: 24px 32px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.section-cta-bar .cta-text {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--navy);
+  margin: 0;
+  flex: 1;
+  min-width: 240px;
+}
+.section-cta-bar .btn {
+  flex-shrink: 0;
+}
+
+/* ---------- Footer CTA strip (big pre-footer band) ---------- */
+.footer-cta {
+  background: var(--cream);
+  padding: clamp(48px, 7vw, 80px) 0;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  text-align: center;
+}
+.footer-cta h2 {
+  max-width: 22ch;
+  margin: 0 auto 0.4em;
+}
+.footer-cta .lede {
+  max-width: 56ch;
+  margin: 0 auto 1.5em;
+}
+
+/* ---------- Hero refinements ---------- */
+.hero-tag {
+  display: inline-block;
+  background: rgba(184, 149, 72, 0.1);
+  color: var(--gold-deep);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-weight: 500;
+  margin-bottom: 1.4em;
+}
+
+/* ---------- DOI / patent line ---------- */
+.ip-line {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-top: 1em;
+  font-family: var(--font-sans);
+}
+.ip-line a {
+  color: var(--navy-soft);
+  text-decoration-color: var(--border);
+}
+
+/* ---------- Mobile tweaks for v03 ---------- */
+@media (max-width: 720px) {
+  .section-cta-bar { flex-direction: column; align-items: flex-start; }
 }
