@@ -10,12 +10,117 @@
   <meta property="og:description" content="A clinical view of the converging duty-of-care floor for AI mental health tools, with verified citations to each statute and ruling.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://metonym.health/regulation.html">
+  <meta property="og:image" content="https://metonym.health/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Metonym — Clinical evaluation for AI suicide risk detection">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://metonym.health/images/og-image.png">
 
   <link rel="icon" type="image/svg+xml" href="images/metonym-favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Regulation timeline (page-local) */
+    .reg-timeline {
+      position: relative;
+      padding: 0.5em 0 0.2em 0;
+      margin: 2em 0 1em;
+      max-width: 760px;
+    }
+    .reg-timeline::before {
+      content: '';
+      position: absolute;
+      left: 11px;
+      top: 12px;
+      bottom: 12px;
+      width: 2px;
+      background: linear-gradient(to bottom,
+        rgba(15, 42, 68, 0.18) 0%,
+        rgba(15, 42, 68, 0.18) 88%,
+        rgba(15, 42, 68, 0.06) 100%);
+    }
+    .reg-event {
+      position: relative;
+      padding-left: 44px;
+      margin-bottom: 1.5em;
+    }
+    .reg-event:last-child { margin-bottom: 0; }
+    .reg-event::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--gold, #B89548);
+      border: 3px solid #FAFAF8;
+      box-shadow: 0 0 0 1px rgba(184, 149, 72, 0.55);
+    }
+    .reg-event.is-litigation::before,
+    .reg-event.is-enforcement::before {
+      background: #B43C46;
+      box-shadow: 0 0 0 1px rgba(180, 60, 70, 0.5);
+    }
+    .reg-event.is-anticipated::before {
+      background: #FAFAF8;
+      border: 3px solid #FAFAF8;
+      box-shadow: 0 0 0 1.5px rgba(15, 42, 68, 0.35);
+    }
+    .reg-event .reg-date {
+      display: block;
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold, #B89548);
+      font-weight: 700;
+      margin-bottom: 0.18em;
+    }
+    .reg-event.is-litigation .reg-date,
+    .reg-event.is-enforcement .reg-date {
+      color: #B43C46;
+    }
+    .reg-event.is-anticipated .reg-date {
+      color: rgba(15, 42, 68, 0.55);
+    }
+    .reg-event h4 {
+      margin: 0 0 0.2em;
+      font-size: 1rem;
+      line-height: 1.3;
+      font-family: var(--font-heading, "Manrope", sans-serif);
+    }
+    .reg-event p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--navy-soft, #2a4f7a);
+      line-height: 1.5;
+      max-width: 56ch;
+    }
+    .reg-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2em;
+      margin-bottom: 1.4em;
+      font-size: 0.78rem;
+      color: var(--navy-soft, #2a4f7a);
+    }
+    .reg-legend .swatch {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 0.4em;
+      vertical-align: middle;
+    }
+    .reg-legend .sw-gold { background: var(--gold, #B89548); box-shadow: 0 0 0 1px rgba(184, 149, 72, 0.55); }
+    .reg-legend .sw-red { background: #B43C46; box-shadow: 0 0 0 1px rgba(180, 60, 70, 0.5); }
+    .reg-legend .sw-anticipated { background: #FAFAF8; box-shadow: 0 0 0 1.5px rgba(15, 42, 68, 0.35); }
+  </style>
 </head>
 <body>
 
@@ -46,6 +151,100 @@
       <h1>The legal landscape for AI mental health tools solidified in 2025.</h1>
       <p class="lede" style="max-width: 64ch;">
         There is no single, settled duty-of-care standard yet — the law is being built in real time, mostly through litigation and state-level statutes. The picture below is a clinical view of where it stands now, with verified citations to every ruling and statute. It is not legal advice.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Regulatory wave timeline ============== -->
+  <section class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">The regulatory wave at a glance</p>
+        <h2>How the 18 months from Feb 2025 to Aug 2026 reshaped AI mental-health law.</h2>
+      </div>
+
+      <div class="reg-legend" aria-hidden="false">
+        <span><span class="swatch sw-gold"></span>Enacted or effective law</span>
+        <span><span class="swatch sw-red"></span>Enforcement action or litigation</span>
+        <span><span class="swatch sw-anticipated"></span>Anticipated / upcoming effective date</span>
+      </div>
+
+      <div class="reg-timeline">
+        <div class="reg-event">
+          <span class="reg-date">2025-02-02 · EU</span>
+          <h4>EU AI Act Article 5(1)(f) effective</h4>
+          <p>Prohibition of AI emotion-recognition in workplace and education — with a medical/safety exception that clinical AI evaluation has to walk through.</p>
+        </div>
+
+        <div class="reg-event is-litigation">
+          <span class="reg-date">2025-05 · M.D. Fla.</span>
+          <h4>Garcia v. Character Technologies — "product, not speech"</h4>
+          <p>Judge Anne C. Conway rules the chatbot is a product for product-liability purposes. First Amendment defense rejected. Doctrinal hinge for the rest of this list.</p>
+        </div>
+
+        <div class="reg-event">
+          <span class="reg-date">2025-05-07 · UT</span>
+          <h4>UT HB 452 effective</h4>
+          <p>First US state to regulate AI mental-health chatbots. AI-disclosure requirements, ad disclosure, data-sharing restrictions. Penalty up to $2,500 per violation.</p>
+        </div>
+
+        <div class="reg-event">
+          <span class="reg-date">2025-07-22 · UK</span>
+          <h4>UK MHRA reforms package</h4>
+          <p>International reliance pathway announced. SaMD / AI-as-a-Medical-Device initially excluded from full recognition; reliance applications expected H1 2026.</p>
+        </div>
+
+        <div class="reg-event">
+          <span class="reg-date">2025-08-04 · IL</span>
+          <h4>IL HB 1806 signed — Wellness &amp; Oversight for Psychological Resources Act</h4>
+          <p>Nation's strongest restriction on AI in therapy. Prohibits AI-provided therapy unless conducted by a licensed professional. Penalty up to $10,000 per violation.</p>
+        </div>
+
+        <div class="reg-event is-enforcement">
+          <span class="reg-date">2025-08-18 · TX</span>
+          <h4>Texas AG investigation — Meta + Character.AI</h4>
+          <p>Civil Investigative Demands issued for "misleadingly marketing themselves as mental health services." Impersonation of licensed professionals named explicitly.</p>
+        </div>
+
+        <div class="reg-event is-enforcement">
+          <span class="reg-date">2025-09-11 · Federal</span>
+          <h4>FTC 6(b) inquiry into 7 AI chatbot companies</h4>
+          <p>Orders issued to Alphabet, Character Technologies, Instagram, Meta, OpenAI, Snap, and xAI. Implicit health-care nexus. Market-wide signal.</p>
+        </div>
+
+        <div class="reg-event">
+          <span class="reg-date">2025-10-13 · CA</span>
+          <h4>CA SB 243 signed — Companion Chatbot Law</h4>
+          <p>First comprehensive US state law on companion chatbots. Disclosure, crisis-referral, suicide/self-harm response, and reporting protocols. Effective Jan 1, 2026.</p>
+        </div>
+
+        <div class="reg-event">
+          <span class="reg-date">2025-11-05 · NY</span>
+          <h4>NY AI Companion Models Law effective</h4>
+          <p>Crisis-resource referral, AI disclosure, no human-emotion claim. Civil penalties up to $15,000 per day — the highest among current state regimes.</p>
+        </div>
+
+        <div class="reg-event is-anticipated">
+          <span class="reg-date">2026-01-01 · CA + TX</span>
+          <h4>CA SB 243 effective · TX TRAIGA effective</h4>
+          <p>Two of the three largest US state markets bring comprehensive AI regulation into force on the same day. Texas state-level enforcement footprint expands.</p>
+        </div>
+
+        <div class="reg-event is-litigation">
+          <span class="reg-date">2026-05-01 · PA</span>
+          <h4>Pennsylvania v. Character Technologies filed</h4>
+          <p>First US state-AG action alleging unlicensed practice of medicine by an AI chatbot. Fake PA medical license number named in the complaint. Injunction sought.</p>
+        </div>
+
+        <div class="reg-event is-anticipated">
+          <span class="reg-date">2026-08-02 · EU</span>
+          <h4>EU AI Act high-risk obligations apply (anticipated)</h4>
+          <p>Most remaining AI Act obligations come into force, including conformity assessment, risk management, post-market monitoring (Articles 9, 10, 11, 14, 15, 72).</p>
+        </div>
+      </div>
+
+      <p class="muted" style="font-size: 0.86rem; max-width: 64ch; margin: 1.5em 0 0;">
+        Sources, statute references, and full case detail for every event above appear in the sections that follow. This timeline is a clinical summary, not legal advice.
       </p>
     </div>
   </section>

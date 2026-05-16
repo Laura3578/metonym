@@ -10,12 +10,93 @@
   <meta property="og:description" content="Salient Distress Model and Mechanical Severity Score. The clinical framework behind Metonym evaluations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://metonym.health/methodology.html">
+  <meta property="og:image" content="https://metonym.health/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Metonym — Clinical evaluation for AI suicide risk detection">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://metonym.health/images/og-image.png">
 
   <link rel="icon" type="image/svg+xml" href="images/metonym-favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* SDM/MSS framework flow diagram (page-local) */
+    .sdm-mss-flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 0;
+      margin: 2.4em 0 1em;
+    }
+    .sdm-mss-flow .flow-step {
+      flex: 1 1 200px;
+      min-width: 180px;
+      background: rgba(15, 42, 68, 0.04);
+      border: 1px solid rgba(15, 42, 68, 0.12);
+      border-radius: 4px;
+      padding: 1.1em 1em 1.1em;
+      display: flex;
+      flex-direction: column;
+    }
+    .sdm-mss-flow .flow-step-sdm,
+    .sdm-mss-flow .flow-step-mss {
+      background: rgba(184, 149, 72, 0.07);
+      border-color: rgba(184, 149, 72, 0.32);
+    }
+    .sdm-mss-flow .flow-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--navy-soft, #2a4f7a);
+      font-weight: 700;
+      margin-bottom: 0.55em;
+    }
+    .sdm-mss-flow .flow-step-sdm .flow-label,
+    .sdm-mss-flow .flow-step-mss .flow-label {
+      color: var(--gold, #B89548);
+    }
+    .sdm-mss-flow .flow-step h4 {
+      margin: 0 0 0.5em;
+      font-size: 1.02rem;
+      line-height: 1.25;
+      font-family: var(--font-heading, "Manrope", sans-serif);
+    }
+    .sdm-mss-flow .flow-step p {
+      font-size: 0.86rem;
+      line-height: 1.45;
+      margin: 0;
+      color: var(--navy-soft, #2a4f7a);
+    }
+    .sdm-mss-flow .flow-tag {
+      font-size: 0.7rem !important;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold, #B89548) !important;
+      margin-top: auto !important;
+      padding-top: 0.8em;
+      font-weight: 600;
+    }
+    .sdm-mss-flow .flow-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 30px;
+      font-size: 1.3rem;
+      color: rgba(15, 42, 68, 0.35);
+      font-weight: 300;
+      user-select: none;
+    }
+    @media (max-width: 760px) {
+      .sdm-mss-flow { gap: 0.8em; }
+      .sdm-mss-flow .flow-arrow { display: none; }
+    }
+  </style>
 </head>
 <body>
 
@@ -123,6 +204,39 @@
         <p class="eyebrow">The Two Frameworks</p>
         <h2>Salient Distress Model and Mechanical Severity Score.</h2>
       </div>
+
+      <!-- Visual flow diagram: how SDM + MSS combine -->
+      <div class="sdm-mss-flow" aria-label="How SDM and MSS combine to produce reproducible AI evaluation">
+        <div class="flow-step flow-step-input">
+          <span class="flow-label">Input</span>
+          <h4>Multi-turn AI conversation</h4>
+          <p>Real or scenario-constructed transcripts of how a system handles psychological distress.</p>
+        </div>
+        <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+        <div class="flow-step flow-step-sdm">
+          <span class="flow-label">SDM</span>
+          <h4>Salient Distress Model</h4>
+          <p>The clinical lens — <em>what</em> an evaluator should notice in the conversation.</p>
+          <p class="flow-tag">Openly published · CC-BY-NC 4.0</p>
+        </div>
+        <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+        <div class="flow-step flow-step-mss">
+          <span class="flow-label">MSS</span>
+          <h4>Mechanical Severity Score</h4>
+          <p>The scoring procedure — <em>how</em> to measure what was noticed, consistently.</p>
+          <p class="flow-tag">Patent-pending · 64/059,837</p>
+        </div>
+        <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+        <div class="flow-step flow-step-output">
+          <span class="flow-label">Output</span>
+          <h4>Reproducible evaluation</h4>
+          <p>Severity scores, worked examples, prioritized recommendations. Citable methodology reference.</p>
+        </div>
+      </div>
+
+      <p class="muted" style="font-size: 0.88rem; max-width: 64ch; margin: 0 auto 2.5em; text-align: center;">
+        SDM is the clinical framework. MSS is the scoring procedure that operationalizes it. Together they produce evaluation evidence that is clinically grounded, reproducible across systems, and citable in regulatory or litigation contexts.
+      </p>
 
       <div class="framework">
         <div class="framework-card">
