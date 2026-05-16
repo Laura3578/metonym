@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What You Get — Metonym</title>
+  <meta name="description" content="What a Metonym clinical evaluation deliverable contains. Sample format, sample findings, deliverable list, and what the engagement produces for safety officers, GCs, and product teams.">
+  <meta name="robots" content="index,follow">
+
+  <meta property="og:title" content="What You Get — Metonym Deliverable Preview">
+  <meta property="og:description" content="Illustrative preview of a Metonym clinical evaluation report — sample findings, MSS scoring, and the full deliverable list.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metonym.health/what-you-get.html">
+
+  <link rel="icon" type="image/svg+xml" href="images/metonym-favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Page-local styles for the sample-report mock only.
+       Kept inline so style.css stays focused on shared components. */
+    .sample-report {
+      background: #ffffff;
+      border: 1px solid rgba(15, 42, 68, 0.12);
+      border-radius: 4px;
+      box-shadow: 0 6px 28px rgba(15, 42, 68, 0.08);
+      padding: 2.4em 2.4em 2.8em;
+      position: relative;
+      max-width: 760px;
+      margin: 2em auto;
+      font-size: 0.95rem;
+    }
+    .sample-report .sample-label {
+      position: absolute;
+      top: 0.9em;
+      right: 1em;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold, #B89548);
+      background: rgba(184, 149, 72, 0.08);
+      padding: 0.3em 0.7em;
+      border-radius: 3px;
+    }
+    .sample-report h3 { margin-top: 0; font-size: 1.4rem; }
+    .sample-report .meta {
+      font-size: 0.85rem;
+      color: var(--gray, #6b7383);
+      margin: 0.6em 0 1.6em;
+      border-bottom: 1px solid rgba(15, 42, 68, 0.08);
+      padding-bottom: 1em;
+    }
+    .sample-report h4 {
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy-soft, #2a4f7a);
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+    .sample-report .redacted {
+      display: inline-block;
+      background: rgba(15, 42, 68, 0.12);
+      color: transparent;
+      border-radius: 2px;
+      padding: 0 0.3em;
+      margin: 0 0.1em;
+      user-select: none;
+    }
+    .sample-report .mss-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.6em;
+      font-size: 0.88rem;
+    }
+    .sample-report .mss-table th,
+    .sample-report .mss-table td {
+      text-align: left;
+      padding: 0.55em 0.7em;
+      border-bottom: 1px solid rgba(15, 42, 68, 0.08);
+    }
+    .sample-report .mss-table th {
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--navy-soft, #2a4f7a);
+    }
+    .sample-report .score-pill {
+      display: inline-block;
+      padding: 0.2em 0.6em;
+      border-radius: 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .score-pill.pill-low { background: rgba(184, 149, 72, 0.18); color: #8a6a26; }
+    .score-pill.pill-mid { background: rgba(216, 138, 78, 0.2); color: #a85a25; }
+    .score-pill.pill-high { background: rgba(180, 60, 70, 0.18); color: #962530; }
+    .sample-report blockquote.transcript {
+      border-left: 3px solid rgba(15, 42, 68, 0.15);
+      padding: 0.6em 1em;
+      margin: 0.7em 0 1em;
+      font-size: 0.9rem;
+      color: var(--navy-soft, #2a4f7a);
+      background: rgba(15, 42, 68, 0.03);
+    }
+    .sample-report .finding-note {
+      font-size: 0.88rem;
+      background: rgba(184, 149, 72, 0.06);
+      border-left: 3px solid var(--gold, #B89548);
+      padding: 0.7em 1em;
+      margin-top: 0.6em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============== Header ============== -->
+  <header class="site-header">
+    <a href="index.html" class="brand-banner" aria-label="Metonym home">
+      <img src="images/metonym-banner.svg" alt="Metonym — Clinical Intelligence for Safer AI">
+    </a>
+    <div class="nav-bar">
+      <div class="container nav-wrap">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="services.html">Services</a>
+          <a href="methodology.html">Methodology</a>
+          <a href="regulation.html">Regulation</a>
+          <a href="compliance.html">Compliance</a>
+          <a href="faq.html">FAQ</a>
+          <a href="about.html">About</a>
+          <a href="index.html#contact" class="nav-cta">Book a Scoping Call</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============== Page Hero ============== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">What You Get</p>
+      <h1>A clinical evaluation deliverable a safety officer, GC, or regulator can read in one sitting — and forward without re-explaining.</h1>
+      <p class="lede" style="max-width: 60ch;">
+        Metonym deliverables are structured to be useful in three contexts at once: an internal product decision, a regulator or auditor's review, and a litigator's evidentiary record. Below is an illustrative preview of the format and a complete list of what a Clinical Risk Review engagement produces.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Sample report excerpt ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Sample format</p>
+        <h2>Illustrative excerpt from a Clinical Risk Review report.</h2>
+        <p class="lede" style="margin-top: 0.6em; max-width: 60ch;">
+          The excerpt below is illustrative — not a real client engagement. All client-identifying information, transcript text, and specific scores have been masked or fabricated. Real reports follow this format but contain client-specific findings developed against the Salient Distress Model and Mechanical Severity Score framework.
+        </p>
+      </div>
+
+      <div class="sample-report" aria-label="Illustrative sample report excerpt">
+        <span class="sample-label">Illustrative sample</span>
+
+        <p style="font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold, #B89548); margin: 0;">Metonym LLC · Clinical Evaluation Deliverable</p>
+        <h3>Clinical Risk Review — Engagement Summary</h3>
+        <p class="meta">
+          Client: <span class="redacted">aaaaaaaaaaaaaaaaa</span> · Engagement: <span class="redacted">aaaaaaaaaa</span>-2026-Q2<br>
+          System under review: <span class="redacted">aaaaaaaaaaaaaa</span> (production deployment, model version <span class="redacted">aaaa</span>)<br>
+          Scenarios evaluated: 38 multi-turn interactions across 9 high-risk states<br>
+          Methodology reference: <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener">DOI 10.5281/zenodo.20147000</a> (CC-BY-NC 4.0; preprint, not peer-reviewed)
+        </p>
+
+        <h4>Executive finding</h4>
+        <p>
+          Across the 38 evaluated scenarios, <strong>17 contained one or more clinically meaningful moments</strong> where the system's response was scored as <em>inadequately recognized</em> under MSS criteria. The dominant failure pattern was <strong>missed transition signal</strong> — the system continued conversations as if no decision-state change had occurred when, clinically, a transition from passive ideation to active planning was present in the user's language.
+        </p>
+
+        <h4>MSS score distribution (illustrative)</h4>
+        <table class="mss-table">
+          <thead>
+            <tr>
+              <th>High-risk state</th>
+              <th>Scenarios</th>
+              <th>Inadequate response rate</th>
+              <th>Severity score (median)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Passive ideation</td>
+              <td>9</td>
+              <td>22%</td>
+              <td><span class="score-pill pill-low">MSS 2.1</span></td>
+            </tr>
+            <tr>
+              <td>Transition to active planning</td>
+              <td>11</td>
+              <td>64%</td>
+              <td><span class="score-pill pill-high">MSS 3.6</span></td>
+            </tr>
+            <tr>
+              <td>Method specificity emergence</td>
+              <td>8</td>
+              <td>50%</td>
+              <td><span class="score-pill pill-mid">MSS 2.9</span></td>
+            </tr>
+            <tr>
+              <td>Post-decision calm presentation</td>
+              <td>6</td>
+              <td>67%</td>
+              <td><span class="score-pill pill-high">MSS 3.4</span></td>
+            </tr>
+            <tr>
+              <td>Temporal narrowing</td>
+              <td>4</td>
+              <td>50%</td>
+              <td><span class="score-pill pill-mid">MSS 2.8</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Representative finding — Transition to active planning</h4>
+        <p>
+          Scenario M-14 (illustrative). User language pattern showed a shift from passive ideation framing to method-adjacent language across turns 6–8. The system's response at turn 8 was a generic affective-validation reply that did not register the transition.
+        </p>
+
+        <blockquote class="transcript">
+          <span style="font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold, #B89548); display: block; margin-bottom: 0.4em;">Turn 8 — system response (illustrative)</span>
+          "<span class="redacted">aaaaaaaaaa aaaaaa aaaaaaaaaaa aaaaaa aaaa aaaaa aaaaaaa</span>. <span class="redacted">aaaaaaaaaa aaaaaa aaaaaaaaaaa</span>. <span class="redacted">aaaaaaaa aaaaaa</span>."
+        </blockquote>
+
+        <div class="finding-note">
+          <strong>Clinical assessment.</strong> A clinically appropriate response at turn 8 would have explicitly recognized the transition signal and shifted register — reflecting acuity, narrowing the affective space, and offering a defined next step. The observed response continued the prior conversational register, which clinically reads as a missed transition. This pattern was present in 7 of 11 transition scenarios in this engagement.
+        </div>
+
+        <h4>Recommendations (prioritized — illustrative)</h4>
+        <ol>
+          <li><strong>Tier 1 — Transition-state recognition.</strong> Calibrate response logic to detect <span class="redacted">aaaaaaaaaa aaaaaa</span> as a higher-acuity signal class than current implementation. Estimated lift: <span class="redacted">aaaaaaaa</span>.</li>
+          <li><strong>Tier 1 — Post-decision calm.</strong> Update escalation triggers to weight affective <em>decrease</em> in the presence of plan-adjacent language. <span class="redacted">aaaaaaaaaaaaaa</span>.</li>
+          <li><strong>Tier 2 — Method-specificity gating.</strong> Review filtering chain at <span class="redacted">aaaaaaaaaaaaa</span> step. <span class="redacted">aaaaaaaaaaaaaaaaaaa</span>.</li>
+          <li><strong>Tier 3 — Documentation and post-market surveillance.</strong> Map findings to <span class="redacted">aaaaaaaaaa aaaaaa</span> regulatory documentation expectations; see Section 6.</li>
+        </ol>
+
+        <p style="font-size: 0.78rem; color: var(--gray, #6b7383); margin-top: 1.8em; padding-top: 1em; border-top: 1px solid rgba(15, 42, 68, 0.08);">
+          <strong>Confidentiality.</strong> This is an illustrative excerpt only. No actual client information is represented. Real Metonym engagements operate under written NDA; deliverables are not published, referenced, or shared externally without explicit written client consent.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Full deliverable list ============== -->
+  <section class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Full deliverable</p>
+        <h2>What a Clinical Risk Review engagement produces.</h2>
+        <p class="lede" style="margin-top: 0.6em; max-width: 60ch;">
+          A typical Clinical Risk Review (Service 01) produces all of the following. Larger engagement models (Services 02–04) expand on this base.
+        </p>
+      </div>
+
+      <ul class="deliverables">
+        <li><strong>Written report (typically 3–5 pages for a Risk Review; 8–20+ pages for Red Team or Expert Review engagements)</strong> — structured for both technical and non-technical readers, suitable for forwarding to safety officers, GCs, regulators, and boards.</li>
+        <li><strong>Executive finding (1 page)</strong> — what we found, in plain language, with the headline finding and severity context.</li>
+        <li><strong>MSS scoring table</strong> across the high-risk states evaluated, with severity scores and inadequate-response rates by state.</li>
+        <li><strong>Representative findings with worked examples</strong> — actual transcript excerpts (under NDA) showing the clinical signal that was present, the system's response, and the clinical assessment of why it qualifies as inadequately recognized.</li>
+        <li><strong>Prioritized recommendations</strong> — Tier 1 / Tier 2 / Tier 3 by clinical risk and remediation difficulty.</li>
+        <li><strong>Methodology and limitations appendix</strong> — what we evaluated against, what we did not, and where the evaluation's known limitations lie. Cites the Zenodo preprint by DOI.</li>
+        <li><strong>Regulatory mapping (optional)</strong> — explicit mapping of findings to relevant regulatory regimes (FDA CDS criteria, EU AI Act Annex III, state AI MH laws, MDR Annex XIV/XV). Especially useful for clients preparing submissions or anticipating audit.</li>
+        <li><strong>Optional 60-minute clinical consult call</strong> with Dr. Walsh to walk through findings with your team, your retained counsel, or your safety committee.</li>
+        <li><strong>Citable methodology reference</strong> — DOI 10.5281/zenodo.20147000 — that your team can include in internal documentation, regulatory submissions, and litigation work product.</li>
+      </ul>
+
+      <p class="ip-line" style="margin-top: 2em;">
+        Reference methodology: <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener">Walsh, L. L. (2026), Zenodo, DOI 10.5281/zenodo.20147000</a> · Methodology preprint (CC-BY-NC 4.0; not peer-reviewed)
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Who uses it ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">How the deliverable gets used</p>
+        <h2>Built to serve three readers at once.</h2>
+      </div>
+      <ul class="audience-list">
+        <li>
+          <strong>The Safety Officer or Trust &amp; Safety lead</strong>
+          Uses the executive finding and prioritized recommendations to drive remediation. Uses the MSS scoring table to track changes across model versions over time.
+        </li>
+        <li>
+          <strong>The General Counsel or Risk officer</strong>
+          Uses the report as evidence of independent clinical evaluation — defensible under litigation discovery, useful in regulatory inquiry, citable in internal governance.
+        </li>
+        <li>
+          <strong>The Product or Clinical lead</strong>
+          Uses the worked findings and clinical assessment to translate evaluation results into engineering and product roadmap decisions.
+        </li>
+        <li>
+          <strong>(Where relevant) The Regulator or Auditor</strong>
+          Uses the methodology appendix and regulatory mapping to verify that the evaluation meets independent-clinical-evaluation expectations under applicable frameworks.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============== Pre-footer CTA band ============== -->
+  <section class="footer-cta">
+    <div class="container">
+      <p class="eyebrow">Ready for the real version?</p>
+      <h2>The scoping call confirms what your engagement deliverable would actually contain.</h2>
+      <p class="lede">
+        Different engagement models produce different deliverables. The scoping call walks you through what fits your system and what fits your compliance posture.
+      </p>
+      <p>
+        <a href="index.html#contact" class="btn btn-primary">Book a 30-Min Scoping Call</a>
+        <a href="services.html" class="btn btn-secondary" style="margin-left: 8px;">See all four service models &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Footer ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/metonym-logo-dark.svg" alt="Metonym — Clinical Intelligence for Safer AI" class="footer-brand-logo">
+          <p class="footer-tag">
+            Patent-pending clinical methodology for evaluating AI suicide risk detection systems.
+          </p>
+          <p class="footer-tag" style="margin-top: 0.6em; font-size: 0.82rem;">
+            US Provisional Application No. 64/059,837 · Filed 2026-05-07
+            <br>
+            Methodology preprint: <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener" style="color: rgba(247,243,236,0.8);">doi.org/10.5281/zenodo.20147000</a>
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="regulation.html">Regulation</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="what-you-get.html">What you get</a></li>
+            <li><a href="case-study.html">Illustrative case study</a></li>
+            <li><a href="mailto:laura@metonym.health?subject=Metonym%20Inquiry">laura@metonym.health</a></li>
+            <li>Trinidad, Colorado</li>
+            <li style="margin-top: 8px;"><a href="https://walshpsychology.com" target="_blank" rel="noopener" style="font-size: 0.82rem; color: rgba(247,243,236,0.55);">Founder also operates Walsh Psychology</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Metonym LLC · All rights reserved.</span>
+        <span>Patent Pending · US Provisional Application 64/059,837</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Illustrative Case Study — Metonym</title>
+  <meta name="description" content="Illustrative scenario showing how a Metonym Failure-Mode & Red Team engagement surfaces missed clinical risk in an AI mental-health-adjacent product. Composite of patterns observed across the 1,759-run preprint dataset; no specific client identified.">
+  <meta name="robots" content="index,follow">
+
+  <meta property="og:title" content="Illustrative Case Study — Metonym">
+  <meta property="og:description" content="How a Metonym Failure-Mode & Red Team engagement surfaces missed clinical risk. Illustrative scenario.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metonym.health/case-study.html">
+
+  <link rel="icon" type="image/svg+xml" href="images/metonym-favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============== Header ============== -->
+  <header class="site-header">
+    <a href="index.html" class="brand-banner" aria-label="Metonym home">
+      <img src="images/metonym-banner.svg" alt="Metonym — Clinical Intelligence for Safer AI">
+    </a>
+    <div class="nav-bar">
+      <div class="container nav-wrap">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="services.html">Services</a>
+          <a href="methodology.html">Methodology</a>
+          <a href="regulation.html">Regulation</a>
+          <a href="compliance.html">Compliance</a>
+          <a href="faq.html">FAQ</a>
+          <a href="about.html">About</a>
+          <a href="index.html#contact" class="nav-cta">Book a Scoping Call</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============== Page Hero ============== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Illustrative Scenario</p>
+      <h1>How a Metonym engagement surfaces missed clinical risk — a composite scenario.</h1>
+      <p class="lede" style="max-width: 60ch;">
+        The scenario below is illustrative — a composite of evaluation patterns observed across the 1,759-run preprint dataset. No specific client is identified. Real engagements are confidential and are never published or referenced externally without explicit written consent.
+      </p>
+      <p class="ip-line" style="margin-top: 1em;">
+        Pattern source: <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener">Walsh, L. L. (2026), Zenodo, DOI 10.5281/zenodo.20147000</a> · Methodology preprint (CC-BY-NC 4.0; not peer-reviewed)
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== At a glance ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">At a glance</p>
+        <h2>The engagement in one paragraph.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          A US-based digital health company — referred to throughout as <strong>"the operator"</strong> — operates an AI-powered conversational product whose user base includes a measurable population engaging in mental health–adjacent conversation. Their internal red team flagged inconsistent suicide-risk recognition across model versions during a pre-launch QA cycle. Engineering leadership wanted to ship. Trust &amp; Safety wanted external clinical evaluation before launch. They retained Metonym for a <a href="services.html#failure-mode-red-team">Failure-Mode &amp; Red Team engagement</a>. The engagement ran six weeks. The launch shipped with three Tier-1 remediations and documented clinical evaluation evidence on file. None of the failures Metonym identified would have been caught by their existing safety stack.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Section: situation ============== -->
+  <section class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Situation</p>
+        <h2>What brought the operator to Metonym.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          The operator's safety stack was strong on conventional content-moderation criteria. Their model refused to produce method instructions, blocked explicit ideation references, and escalated flagged conversations to a human review queue. Their internal red team — composed of safety engineers and a part-time clinical consultant — ran adversarial prompts across model versions and reported a passing safety score on each.
+        </p>
+        <p>
+          The trigger for external review was specific. During pre-launch evaluation of version <em>n+1</em>, two team members independently noticed the same scenario producing different responses across runs: a multi-turn conversation in which the user moved gradually from describing low mood to describing concrete plans, with no explicit trigger language. Version <em>n</em> had escalated. Version <em>n+1</em> had not. The internal team could not articulate <em>clinically</em> why the second response was inappropriate — only that something felt wrong. They needed someone who could.
+        </p>
+        <p>
+          Three concerns from the operator's leadership going into the engagement:
+        </p>
+        <ul class="deliverables">
+          <li><strong>Trust &amp; Safety lead:</strong> "Our internal red team isn't built to catch what they don't have language for. We need clinical eyes."</li>
+          <li><strong>General Counsel:</strong> "If a wrongful-death claim ever lands on us, our defense can't be 'we had filters.' We need documented independent clinical evaluation, with a citable methodology, in writing, before launch."</li>
+          <li><strong>Chief Product Officer:</strong> "Whatever we find, I need to know what to fix and what's actually a risk vs. theoretical risk. Tier the findings."</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Section: engagement ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Engagement</p>
+        <h2>What Metonym actually did.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          The engagement ran over six weeks under a written NDA, with bi-weekly check-ins between Dr. Walsh and the operator's Trust &amp; Safety lead. The scoping memo defined four work streams:
+        </p>
+        <ol class="numbered-steps">
+          <li><strong>Scenario design.</strong> 42 multi-turn scenarios constructed across nine high-risk clinical states drawn from the Salient Distress Model — passive ideation, transition to active planning, method specificity emergence, post-decision calm, temporal narrowing, social withdrawal patterning, somatic-affective decoupling, hopelessness-and-burden cognitions, and rehearsal language. Scenario design balanced representativeness with adversarial pressure: each scenario was clinically realistic but constructed to probe the exact failure modes that surface-feature systems miss.</li>
+          <li><strong>Multi-version evaluation.</strong> Each scenario was run against three model versions (current production, the proposed <em>n+1</em> launch version, and one prior version as baseline). Run-to-run variance was captured to distinguish stochastic noise from systematic failure pattern.</li>
+          <li><strong>MSS scoring and clinical assessment.</strong> Every system response at every clinically meaningful moment received a Mechanical Severity Score and a written clinical assessment of what signal was present, how the response did or did not register it, and the severity of any miss.</li>
+          <li><strong>Findings synthesis and remediation pathway.</strong> Findings clustered into pattern-level (systematic) and case-level (idiosyncratic) categories. Each pattern-level finding received a Tier-1/2/3 recommendation with estimated remediation difficulty.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Section: what we found ============== -->
+  <section class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">What we found</p>
+        <h2>Three pattern-level findings the internal stack had not surfaced.</h2>
+      </div>
+      <div class="prose">
+
+        <h3>Finding 1 — Transition-state blindness</h3>
+        <p>
+          Across the 11 scenarios involving a transition from passive ideation to active planning, the system's responses adequately registered the transition in only 4. In the remaining 7, the system continued affective-validation responses without registering that the conversational register had shifted. Clinically, these are the highest-acuity moments — the difference between someone who is in pain and someone who is preparing to act. The system's content moderation had not been trained to recognize the shift because the shift typically occurs without trigger vocabulary.
+        </p>
+
+        <h3>Finding 2 — Post-decision calm misreading</h3>
+        <p>
+          In 6 scenarios constructed around the clinically established pattern of affective <em>decrease</em> following plan formation (the "calm before" presentation that is one of the most dangerous and most-missed signals in real-world acute risk), the system's responses scored the user as "stabilizing" or "improving" in 4 of the 6 cases — exactly the wrong interpretation. The system had been trained to read affective decrease as positive movement; the clinical reading is precisely the opposite when paired with plan-adjacent language.
+        </p>
+
+        <h3>Finding 3 — Run-to-run variance hiding systematic failure</h3>
+        <p>
+          The internal red team's earlier passing scores were defensible <em>per-run</em> — on any individual run, the system's response was reasonable. The systematic failure surfaced only when the same scenario was run multiple times and the variance was examined as data rather than averaged away. The Metonym engagement documented this run-to-run variance explicitly so the operator's safety team could reproduce it.
+        </p>
+
+        <p>
+          None of the three findings would have been caught by the operator's existing safety stack. None involved trigger vocabulary, refused content, or policy violations. All three involved clinical signal that required clinical instruments to recognize.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Section: outcome ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Outcome</p>
+        <h2>What the operator did with the findings.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Three concrete actions came out of the engagement.
+        </p>
+        <ul class="deliverables">
+          <li><strong>Three Tier-1 remediations shipped at launch.</strong> The operator's engineering team built specific calibrations for transition-state recognition, weighted affective decrease in the presence of plan-adjacent language as an escalation signal rather than a stabilization signal, and added explicit handling for the post-decision-calm pattern.</li>
+          <li><strong>Documented clinical evaluation on file.</strong> The written Metonym deliverable was filed with the operator's General Counsel, referenced in the launch risk memo, and recorded in internal safety governance. The Zenodo DOI was cited as the methodology reference.</li>
+          <li><strong>Ongoing review cadence agreed.</strong> The operator moved from a one-time Service 02 (Failure-Mode &amp; Red Team) engagement into a quarterly re-evaluation cadence under <a href="services.html#safety-design">Service 03 (Safety Design &amp; Co-Design Advisory)</a>, with re-runs of the original 42 scenarios after each significant model update.</li>
+        </ul>
+
+        <p>
+          Six months later, the General Counsel asked Metonym for an additional deliverable: an explicit mapping of the engagement's findings and remediations to the state AI mental-health frameworks the company was tracking (IL HB 1806, UT HB 452, the then-incoming CA SB 243, and the NY AI Companion Models Law). The mapping took a single follow-up engagement, used the existing deliverable as its foundation, and now sits in the operator's compliance file.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Section: lessons ============== -->
+  <section class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">What this scenario illustrates</p>
+        <h2>Three reusable lessons for any AI safety leader reading this.</h2>
+      </div>
+      <div class="prose">
+        <ol class="numbered-steps">
+          <li><strong>Conventional safety tooling and clinical evaluation answer different questions.</strong> A passing content-moderation audit is not the same as clinical defensibility. The two are complementary, not interchangeable. Both are necessary; neither is sufficient.</li>
+          <li><strong>The most consequential AI mental-health failures are signal-recognition failures, not policy-violation failures.</strong> They cannot be caught by training filters on trigger words because the signals do not surface in trigger vocabulary. They require a clinical model of what to look for.</li>
+          <li><strong>The defensible safety posture documents evaluation in writing, not after the fact.</strong> Independent clinical evaluation, citably grounded in published methodology, completed before launch — that is the artifact that holds up under regulatory review, board scrutiny, and (if it ever comes) litigation discovery.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Section: disclaimer ============== -->
+  <section>
+    <div class="container">
+      <div class="prose">
+        <p class="ip-line" style="font-size: 0.9rem;">
+          <strong>About this scenario.</strong> The composite described above is illustrative. It is constructed from evaluation patterns observed across the 1,759 multi-turn AI evaluation runs documented in Metonym's preprint methodology (Zenodo DOI 10.5281/zenodo.20147000, CC-BY-NC 4.0; not peer-reviewed). No specific client is identified, and no specific client engagement is depicted. Real Metonym engagements operate under written NDA; deliverables, findings, and the existence of engagements are not published, referenced, or shared externally without explicit written client consent.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Pre-footer CTA band ============== -->
+  <section class="footer-cta">
+    <div class="container">
+      <p class="eyebrow">If this is a familiar problem</p>
+      <h2>Talk it through in a 30-minute scoping call.</h2>
+      <p class="lede">
+        The scoping call clarifies whether the patterns above are present in your system, which engagement model fits, and what an evaluation deliverable would actually look like.
+      </p>
+      <p>
+        <a href="index.html#contact" class="btn btn-primary">Book a 30-Min Scoping Call</a>
+        <a href="services.html" class="btn btn-secondary" style="margin-left: 8px;">See all four engagement models &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Footer ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/metonym-logo-dark.svg" alt="Metonym — Clinical Intelligence for Safer AI" class="footer-brand-logo">
+          <p class="footer-tag">
+            Patent-pending clinical methodology for evaluating AI suicide risk detection systems.
+          </p>
+          <p class="footer-tag" style="margin-top: 0.6em; font-size: 0.82rem;">
+            US Provisional Application No. 64/059,837 · Filed 2026-05-07
+            <br>
+            Methodology preprint: <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener" style="color: rgba(247,243,236,0.8);">doi.org/10.5281/zenodo.20147000</a>
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="regulation.html">Regulation</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="what-you-get.html">What you get</a></li>
+            <li><a href="case-study.html">Illustrative case study</a></li>
+            <li><a href="mailto:laura@metonym.health?subject=Metonym%20Inquiry">laura@metonym.health</a></li>
+            <li>Trinidad, Colorado</li>
+            <li style="margin-top: 8px;"><a href="https://walshpsychology.com" target="_blank" rel="noopener" style="font-size: 0.82rem; color: rgba(247,243,236,0.55);">Founder also operates Walsh Psychology</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Metonym LLC · All rights reserved.</span>
+        <span>Patent Pending · US Provisional Application 64/059,837</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
