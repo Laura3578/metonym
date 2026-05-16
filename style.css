@@ -94,20 +94,37 @@ a:hover { color: var(--gold-deep); }
 }
 .prose { max-width: var(--max-prose); }
 
-/* ---------- Header / nav ---------- */
+/* ---------- Header / banner / nav ---------- */
 .site-header {
   background: var(--ivory);
-  border-bottom: 1px solid var(--border-soft);
+}
+/* Full-width banner band (no max-width, no padding) */
+.brand-banner {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  background: transparent;
+}
+.brand-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* Sticky thin nav bar below banner */
+.nav-bar {
   position: sticky;
   top: 0;
   z-index: 50;
+  background: var(--ivory);
+  border-bottom: 1px solid var(--border-soft);
   backdrop-filter: saturate(180%) blur(6px);
 }
 .nav-wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 18px 0;
+  justify-content: flex-end;
+  padding: 14px 0;
+  gap: 24px;
 }
 .brand {
   font-family: var(--font-serif);
@@ -117,18 +134,19 @@ a:hover { color: var(--gold-deep); }
   color: var(--navy);
   text-decoration: none;
 }
+/* Legacy small-logo class kept for backwards compatibility; banner replaces it */
 .brand-logo {
   display: inline-flex;
   align-items: center;
   line-height: 0;
 }
 .brand-logo img {
-  height: 44px;
+  height: 64px;
   width: auto;
   display: block;
 }
 @media (max-width: 720px) {
-  .brand-logo img { height: 36px; }
+  .brand-logo img { height: 48px; }
 }
 .brand .mark { color: var(--gold-deep); }
 .nav-links { display: flex; gap: 28px; align-items: center; }
