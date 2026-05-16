@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compliance — Operational checklist for AI mental health tools — Metonym</title>
+  <meta name="description" content="A four-domain compliance map for consumer-facing AI mental health tools: disclosure mandates, clinical oversight triggers, data privacy requirements, and post-market monitoring. Synthesized from FDA, Utah HB 452, and the proposed CHATBOT Act.">
+
+  <meta property="og:title" content="Compliance — Operational checklist for AI mental health tools — Metonym">
+  <meta property="og:description" content="The practical compliance map for AI mental health products: disclosures, clinical oversight, data, monitoring.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metonym.health/compliance.html">
+
+  <link rel="icon" type="image/svg+xml" href="images/metonym-favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============== Header (banner + sticky nav) ============== -->
+  <header class="site-header">
+    <a href="index.html" class="brand-banner" aria-label="Metonym home">
+      <img src="images/metonym-banner.svg" alt="Metonym — Clinical Intelligence for Safer AI">
+    </a>
+    <div class="nav-bar">
+      <div class="container nav-wrap">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html#services">Services</a>
+          <a href="methodology.html">Methodology</a>
+          <a href="regulation.html">Regulation</a>
+          <a href="compliance.html">Compliance</a>
+          <a href="about.html">About</a>
+          <a href="index.html#contact" class="nav-cta">Book a Scoping Call</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============== Page Hero ============== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Compliance</p>
+      <h1>The operational map for AI mental health tools.</h1>
+      <p class="lede" style="max-width: 64ch;">
+        Consumer-facing health and mental health chatbots sit at the intersection of FDA digital health policy, state mental health chatbot statutes, federal consumer-protection authority, and emerging professional-licensure law. This page is the practical compliance map — what to disclose, when to involve a clinician, what data you can and cannot use, and what to monitor after launch. <strong>It is not legal advice.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Who this is for ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Who this is for</p>
+        <h2>Product, clinical, legal, privacy, and safety teams shipping AI mental health features.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          The checklist below is a requirements map for product risk triage, launch readiness, vendor diligence, and post-launch governance. It synthesizes the operational obligations imposed (explicitly or implicitly) by three concrete frameworks:
+        </p>
+        <ul style="margin-bottom: 1.3em;">
+          <li><strong>FDA Clinical Decision Support Software guidance</strong> — what software functions are device-regulated vs. excluded under Section 520(o)(1)(E) of the FD&amp;C Act.</li>
+          <li><strong>Utah HB 452</strong> — the most operationally specific state statute for AI mental health chatbots; the policy framework it requires is a useful baseline regardless of jurisdiction.</li>
+          <li><strong>Proposed CHATBOT Act (H.R. 7985)</strong> — would prohibit false claims of professional licensure or human verification.</li>
+        </ul>
+        <p>
+          For the underlying laws and litigation, see <a href="regulation.html">Regulation</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== The four domains ============== -->
+  <section class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">The four compliance domains</p>
+        <h2>Disclosure · Clinical oversight · Data privacy · Post-market monitoring.</h2>
+        <p class="lede" style="margin-top: 0.6em;">
+          Any responsible AI mental health deployment should have an explicit answer in each of these domains, documented in a written policy.
+        </p>
+      </div>
+
+      <div class="framework">
+        <div class="framework-card">
+          <p class="label">01 · Disclosure mandates</p>
+          <h3>The user knows they are talking to AI.</h3>
+          <ul style="margin: 1em 0;">
+            <li>AI-not-human disclosure before first access, after extended inactivity, and whenever the user asks (per Utah HB 452 — applies regardless of jurisdiction as best practice).</li>
+            <li>No marketing or in-product output claiming licensed-professional status, clinical credentials, or human verification unless those facts are true and documented.</li>
+            <li>Explicit limitations and safe-use instructions: intended purpose, capabilities, what the tool is not for, when to seek human or emergency help.</li>
+            <li>Crisis limitations disclosed in-product, especially for mental health use cases.</li>
+            <li>Advertising disclosures — sponsored content clearly marked; user input not used to target ads.</li>
+          </ul>
+          <div class="best-for">
+            <strong>Statutes</strong>
+            Utah HB 452 (specific timing rules), CA SB 243 (minors), NY AI Companion Law, proposed CHATBOT Act (federal).
+          </div>
+        </div>
+
+        <div class="framework-card">
+          <p class="label">02 · Clinical oversight</p>
+          <h3>A licensed professional is in the loop where it matters.</h3>
+          <ul style="margin: 1em 0;">
+            <li>Licensed mental health therapist involvement in development and review for tools that engage in therapist-like conversations (Illinois HB 1806 makes this a legal requirement, not a courtesy).</li>
+            <li>AI is not making independent therapeutic decisions, directly providing therapy, or generating treatment plans without licensed-professional review (IL).</li>
+            <li>Human-in-the-loop review where claimed — and only where it is operationally real. See the HITL controls section below.</li>
+            <li>Risk escalation protocols for self-harm, harm to others, medical emergencies, psychosis, intoxication, and acute physical-harm signals.</li>
+            <li>Real-time response capability for acute physical-harm risk per Utah's affirmative-defense policy framework.</li>
+          </ul>
+          <div class="best-for">
+            <strong>Statutes</strong>
+            Illinois HB 1806 (strictest), Utah HB 452 affirmative-defense policy, FDA Non-Device CDS criteria.
+          </div>
+        </div>
+
+        <div class="framework-card">
+          <p class="label">03 · Data privacy</p>
+          <h3>Mental-health-related data is not sold, shared, or used to target.</h3>
+          <ul style="margin: 1em 0;">
+            <li>No sale or sharing of individually identifiable health information or user input, except under defined statutory pathways (Utah HB 452).</li>
+            <li>No use of user input to determine ad targeting, ad content, or ad customization — except for advertising the chatbot itself (Utah).</li>
+            <li>HIPAA-style privacy and security compliance for the product's policy framework, even if the supplier is not technically a covered entity (Utah affirmative defense).</li>
+            <li>Maintain a full data map: inputs, outputs, logs, model prompts, retrieval context, embeddings, training/fine-tuning use, analytics, service providers, retention periods.</li>
+            <li>Service-provider controls: contracts, access controls, deletion/return obligations, business-associate-style terms where required.</li>
+          </ul>
+          <div class="best-for">
+            <strong>Statutes</strong>
+            Utah HB 452, HIPAA, FTC Act §5, state health-privacy laws, GDPR for EU users.
+          </div>
+        </div>
+
+        <div class="framework-card">
+          <p class="label">04 · Post-market monitoring</p>
+          <h3>You can prove the system is still working safely.</h3>
+          <ul style="margin: 1em 0;">
+            <li>Pre-release testing — clinical accuracy, hallucinations, harmful advice, crisis responses, privacy leaks, discriminatory outputs, prompt injection, jailbreaks (Utah affirmative-defense framework).</li>
+            <li>Ongoing testing on a defined cadence and after material changes.</li>
+            <li>User mechanism to report harmful interactions, with documented review and response process.</li>
+            <li>Regular objective reviews of safety, accuracy, efficacy, fairness, and harmful-interaction patterns — internal or external audits where appropriate.</li>
+            <li>Documentation maintained: model cards, release notes, prompt/system policy changes, evaluation results, incident reports, reviewer logs, harm reports, audit findings.</li>
+          </ul>
+          <div class="best-for">
+            <strong>Statutes</strong>
+            Utah HB 452 (affirmative-defense documentation), FDA digital health policy, EU AI Act high-risk monitoring.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FDA Non-Device CDS criteria ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">FDA Non-Device CDS — the four criteria</p>
+        <h2>Are you regulated as a medical device, or excluded?</h2>
+        <p class="lede" style="margin-top: 0.6em;">
+          Under Section 520(o)(1)(E) of the FD&amp;C Act, certain software is excluded from the device definition. To qualify, all four criteria must be met. Patient-facing AI mental health tools generally do not qualify.
+        </p>
+      </div>
+
+      <div class="prose">
+        <ul class="deliverables">
+          <li><strong>Criterion 1.</strong> The software does not acquire, process, or analyze medical images, in vitro diagnostic signals, or signals from signal-acquisition systems.</li>
+          <li><strong>Criterion 2.</strong> The software is intended to display, analyze, or print medical information about a patient or other medical information.</li>
+          <li><strong>Criterion 3.</strong> The software is intended to support or provide recommendations to a health care professional about prevention, diagnosis, or treatment of a disease or condition — not directly to a patient or caregiver.</li>
+          <li><strong>Criterion 4.</strong> The software is intended to enable the HCP to independently review the basis for the recommendations and not rely primarily on the software output for the clinical decision.</li>
+        </ul>
+        <p>
+          Consumer-facing AI mental health chatbots fail Criterion 3 (they speak directly to users) and often Criterion 4 (the rationale is opaque). FDA's position is that software functions meeting the device definition remain subject to digital health policy, including functions intended for patients or caregivers.
+        </p>
+        <p class="ip-line">
+          Sources: <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software" target="_blank" rel="noopener">FDA CDS guidance page</a> · <a href="https://www.fda.gov/media/191561/download" target="_blank" rel="noopener">Full FDA CDS guidance (PDF)</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== HITL controls ============== -->
+  <section class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">HITL — what "clinically reviewed" actually requires</p>
+        <h2>Human-in-the-loop review is not a label. It is an operational discipline.</h2>
+        <p class="lede" style="margin-top: 0.6em;">
+          A "clinician verified" claim should match what your workflow actually delivers. Six controls separate meaningful HITL from rubber-stamping:
+        </p>
+      </div>
+
+      <div class="prose">
+        <ul class="deliverables">
+          <li><strong>Qualified reviewer.</strong> The reviewer holds a license whose scope matches the recommendation domain. Documented licensure, jurisdiction, and scope mapping.</li>
+          <li><strong>Independent basis review.</strong> The reviewer is shown the patient-specific facts used, source materials, rationale, uncertainty, limitations, and validation context — enough to evaluate and reject the recommendation.</li>
+          <li><strong>Prospective review where needed.</strong> Patient-specific diagnosis, treatment, medication, triage, or crisis recommendations require review <em>before</em> the user sees them — not after.</li>
+          <li><strong>Anti-rubber-stamping controls.</strong> Measure review time, override rate, edit rate, reviewer-agreement patterns, repeated failures. High agreement alone is not evidence of safe review.</li>
+          <li><strong>Claim substantiation.</strong> Public claims align with actual workflow. "Clinician verified" should not be used for unreviewed, retrospective, sample-reviewed, or escalation-only outputs.</li>
+          <li><strong>Change control.</strong> HITL adequacy is reassessed after model, prompt, retrieval, UI, clinical-content, or escalation-protocol changes.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Launch-gate ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Launch-gate checklist</p>
+        <h2>What should be true before you ship.</h2>
+      </div>
+
+      <div class="prose">
+        <h3>Product and claims</h3>
+        <ul style="margin-bottom: 1.3em;">
+          <li><strong>Intended-use statement</strong> — defined: general wellness, administrative, HCP-facing CDS, consumer health info, mental health support, therapy-like support, diagnosis support, or crisis support.</li>
+          <li><strong>Claim inventory</strong> — website copy, app-store listings, onboarding, in-chat system messages, ads, emails, and model outputs reviewed for therapy/diagnosis/treatment/licensure/credentialing/human-review claims.</li>
+          <li><strong>User-role gating</strong> — if relying on FDA Non-Device CDS, intended use and workflow restricted to HCP decision support; consumers cannot receive unreviewed patient-specific recommendations as final advice.</li>
+        </ul>
+
+        <h3>Clinical governance</h3>
+        <ul style="margin-bottom: 1.3em;">
+          <li><strong>Clinical governance committee</strong> — product, clinical, safety, privacy, and legal ownership identified for launch approval and post-launch changes.</li>
+          <li><strong>Licensed therapist involvement</strong> documented in development and review (Utah HB 452 requirement for affirmative-defense readiness).</li>
+          <li><strong>Risk escalation workflows</strong> defined for self-harm, harm to others, medical emergencies, abuse, medication issues, severe mental illness.</li>
+        </ul>
+
+        <h3>Privacy and data</h3>
+        <ul style="margin-bottom: 1.3em;">
+          <li><strong>Data map</strong> documented — inputs, outputs, logs, prompts, retrieval context, embeddings, training use, analytics, service providers, retention.</li>
+          <li><strong>Utah HB 452 data restrictions</strong> applied for Utah users (no selling/sharing health data or user input outside permitted pathways; no targeted advertising based on user input).</li>
+          <li><strong>Service-provider controls</strong> in place — contracts, access controls, deletion obligations, HIPAA-style business associate terms where required.</li>
+        </ul>
+
+        <h3>Monitoring and incident response</h3>
+        <ul style="margin-bottom: 1.3em;">
+          <li><strong>Pre-release testing</strong> complete — clinical accuracy, hallucinations, harmful advice, crisis responses, privacy leaks, discriminatory outputs, prompt injection, jailbreaks, user misunderstanding.</li>
+          <li><strong>Ongoing testing</strong> scheduled — post-launch and after material changes (Utah affirmative-defense policy expects this).</li>
+          <li><strong>Incident workflow</strong> defined — thresholds for safety incidents, privacy incidents, licensure misrepresentation, harmful interactions, adverse outcomes.</li>
+          <li><strong>User reporting mechanism</strong> live — visible in-product way to report harmful interactions, with documented review SLA.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Classification rules of thumb ============== -->
+  <section class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Classification rules of thumb</p>
+        <h2>Where does your product sit?</h2>
+      </div>
+
+      <div class="diff-list">
+        <div class="diff-item">
+          <h3>Likely lower FDA risk</h3>
+          <p>General wellness education, administrative support, appointment navigation, non-patient-specific content. Avoids diagnosis, treatment, clinical action, and disease-management recommendations.</p>
+        </div>
+        <div class="diff-item">
+          <h3>Potential Non-Device CDS</h3>
+          <p>HCP-facing software meeting all four FDA criteria: no prohibited image/signal analysis, displays medical information, supports HCP recommendations, HCP can independently review the basis.</p>
+        </div>
+        <div class="diff-item">
+          <h3>Device review likely</h3>
+          <p>Consumer-facing patient-specific diagnosis, treatment, medication, triage, or disease management. Opaque recommendations an HCP cannot independently evaluate. Medical image or signal analysis. Outputs that direct clinical action without meaningful professional review.</p>
+        </div>
+        <div class="diff-item">
+          <h3>Utah HB 452 controls apply</h3>
+          <p>Generative AI engaging in therapist-like mental health conversations and represented (or reasonably perceived) as providing therapy or helping manage/treat mental health conditions for Utah users.</p>
+        </div>
+        <div class="diff-item">
+          <h3>CHATBOT Act exposure (if enacted)</h3>
+          <p>Any chatbot in health care or social assistance that falsely implies professional licensure, credentials, experience, authoritative licensed advice, or licensed human verification.</p>
+        </div>
+        <div class="diff-item">
+          <h3>EU AI Act high-risk</h3>
+          <p>Clinical AI used in the EU is generally high-risk under the AI Act. Dual-regulated with MDR/IVDR. Emotion recognition in workplaces and schools is prohibited outright under Article 5(1)(f).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Architecture recommendation ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Architecture recommendation</p>
+        <h2>Separate general education from patient-specific clinical output.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          For consumer-facing health and mental health products, the safest architecture is usually to <strong>separate general educational content from patient-specific clinical outputs</strong>. Patient-specific diagnosis, treatment, medication, triage, or crisis-management outputs should be either:
+        </p>
+        <ol style="margin-bottom: 1.3em;">
+          <li>Avoided entirely;</li>
+          <li>Routed to a qualified HCP for prospective independent review; or</li>
+          <li>Treated as a potential device-regulated function requiring FDA pathway analysis.</li>
+        </ol>
+        <p>
+          For mental health use cases, add a dedicated Utah HB 452 control layer for Utah users — and consider using the Utah framework as a baseline safety program even outside Utah. It operationalizes many controls that are likely to be viewed as markers of reasonable care across jurisdictions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== How Metonym fits ============== -->
+  <section class="alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">How Metonym fits</p>
+        <h2>Clinical evaluation is the evidence layer compliance is built on.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Every domain in this checklist — disclosure, clinical oversight, data, monitoring — assumes you can produce evidence that your AI was evaluated against a clinical bar, not just a technical one. Independent clinical evaluation is the load-bearing artifact regulators, plaintiffs' counsel, and your own board will ask for.
+        </p>
+        <p>
+          Metonym is the patent-pending clinical evaluation framework built to provide that evidence — independently, replicably, and defensibly.
+        </p>
+      </div>
+
+      <div class="section-cta-bar" style="margin-top: 2em;">
+        <p class="cta-text">Want to talk through what clinical evaluation looks like for your system?</p>
+        <a href="index.html#contact" class="btn btn-primary">Book a Scoping Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Disclaimer ============== -->
+  <section>
+    <div class="container">
+      <p class="muted" style="font-size: 0.88rem; max-width: 64ch; margin: 0 auto; font-style: italic;">
+        This page is a synthesis of publicly available regulatory and statutory frameworks applicable to consumer-facing AI mental health tools as of May 2026. It is not legal advice and does not establish an attorney-client relationship. The law is moving quickly; verify current text and status before relying on any provision. For legal guidance on your specific deployment, consult qualified counsel.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Footer ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/metonym-logo-dark.svg" alt="Metonym — Clinical Intelligence for Safer AI" class="footer-brand-logo">
+          <p class="footer-tag">
+            Patent-pending clinical methodology for evaluating AI suicide risk detection systems.
+          </p>
+          <p class="footer-tag" style="margin-top: 0.6em; font-size: 0.82rem;">
+            US Provisional Application No. 64/059,837 · Filed 2026-05-07
+            <br>
+            Methodology preprint: <a href="https://doi.org/10.5281/zenodo.20147000" target="_blank" rel="noopener" style="color: rgba(247,243,236,0.8);">doi.org/10.5281/zenodo.20147000</a>
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="regulation.html">Regulation</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:laura@metonym.health?subject=Metonym%20Inquiry">laura@metonym.health</a></li>
+            <li>Trinidad, Colorado</li>
+            <li style="margin-top: 8px;"><a href="https://walshpsychology.com" target="_blank" rel="noopener" style="font-size: 0.82rem; color: rgba(247,243,236,0.55);">Founder also operates Walsh Psychology</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Metonym LLC · All rights reserved.</span>
+        <span>Patent Pending · US Provisional Application 64/059,837</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
