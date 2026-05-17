@@ -92,8 +92,17 @@
       font-weight: 300;
       user-select: none;
     }
-    @media (max-width: 760px) {
-      .sdm-mss-flow { gap: 0.8em; }
+    /* Below ~960px the 4 boxes + 3 arrows can't sit on one line cleanly,
+       so stack vertically and hide the arrows. Prevents the ugly 3+1 wrap. */
+    @media (max-width: 960px) {
+      .sdm-mss-flow {
+        flex-direction: column;
+        gap: 0.8em;
+      }
+      .sdm-mss-flow .flow-step {
+        flex: 1 1 100%;
+        width: 100%;
+      }
       .sdm-mss-flow .flow-arrow { display: none; }
     }
   </style>

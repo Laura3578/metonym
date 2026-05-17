@@ -775,3 +775,30 @@ section.alt {
 @media (max-width: 720px) {
   .section-cta-bar { flex-direction: column; align-items: flex-start; }
 }
+
+/* ---------- v10: Clean column breakpoints for 4-item grids ---------- */
+/* Override .services, .diff-list, .audience-list (each intended to display
+   4 cards) to use explicit breakpoints instead of auto-fit. Prevents the
+   ugly 3+1 wrap state at typical laptop widths. */
+
+.services,
+.diff-list,
+.audience-list {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1079px) {
+  .services,
+  .diff-list,
+  .audience-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 619px) {
+  .services,
+  .diff-list,
+  .audience-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
