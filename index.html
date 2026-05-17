@@ -283,7 +283,9 @@
           <span class="lbl">of clinically meaningful moments received responses scored as <em>inadequately recognized</em> by the AI systems tested (combined rate; range 49–77% by rubric version)</span>
         </div>
         <div class="big-stat">
-          <span class="num">1,759</span>
+          <!-- Animated count-up. To update the total run count after more runs,
+               change the data-count attribute AND the visible text to the new value. -->
+          <span class="num" id="stat-runs" data-count="1759">1,759</span>
           <span class="lbl">Multi-turn AI evaluation runs across 31+ active models on 53 scenarios — 2,644 reference-annotated marker turns</span>
         </div>
         <div class="big-stat">
@@ -323,6 +325,22 @@
           Clinical defensibility, foreseeability analysis, and expert review for incident response or litigation support.
         </li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ============== Substack callout ============== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Stay current</p>
+        <h2>Follow <em>Metonym Clinical AI Intelligence</em>.</h2>
+        <p class="lede" style="max-width: 60ch; margin-top: 0.6em;">
+          Concise intelligence on clinical AI news, regulation, risk, and response. AI-drafted, clinician-curated, fully disclosed editorial model.
+        </p>
+        <p style="margin-top: 1.4em;">
+          <a href="https://metonym.news/" target="_blank" rel="noopener" class="btn btn-primary">Subscribe at metonym.news &rarr;</a>
+        </p>
+      </div>
     </div>
   </section>
 
@@ -454,6 +472,7 @@
           <ul>
             <li><a href="what-you-get.html">What you get</a></li>
             <li><a href="case-study.html">Illustrative case study</a></li>
+            <li><a href="https://metonym.news/" target="_blank" rel="noopener">Metonym Clinical AI Intelligence (newsletter)</a></li>
             <li><a href="mailto:laura@metonym.health?subject=Metonym%20Inquiry">laura@metonym.health</a></li>
             <li>Trinidad, Colorado</li>
             <li style="margin-top: 8px;"><a href="https://walshpsychology.com" target="_blank" rel="noopener" style="font-size: 0.82rem; color: rgba(247,243,236,0.55);">Founder also operates Walsh Psychology</a></li>
@@ -467,6 +486,42 @@
       </div>
     </div>
   </footer>
+
+  <!-- Scroll-triggered count-up animation on the runs stat -->
+  <script>
+    (function() {
+      var el = document.getElementById('stat-runs');
+      if (!el || !('IntersectionObserver' in window)) return;
+      var final = parseInt(el.dataset.count, 10);
+      if (isNaN(final)) return;
+      // Respect reduced-motion preference — skip animation
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      var animated = false;
+      function animate() {
+        if (animated) return;
+        animated = true;
+        var duration = 1600;
+        var startTime = performance.now();
+        function step(now) {
+          var progress = Math.min((now - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+          el.textContent = Math.round(final * eased).toLocaleString();
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        el.textContent = '0';
+        requestAnimationFrame(step);
+      }
+
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { animate(); obs.disconnect(); }
+        });
+      }, { threshold: 0.4 });
+
+      obs.observe(el);
+    })();
+  </script>
 
 </body>
 </html>
