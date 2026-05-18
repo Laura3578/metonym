@@ -214,7 +214,7 @@ a:hover { color: var(--gold-deep); }
 
 /* ---------- Section ---------- */
 section {
-  padding: clamp(32px, 4.5vw, 56px) 0;
+  padding: clamp(48px, 5.5vw, 76px) 0;
   border-bottom: 1px solid var(--border-soft);
 }
 section.alt {
@@ -288,7 +288,7 @@ section.alt {
   padding: 0;
 }
 .stat {
-  border-left: 2px solid var(--gold);
+  border-left: 3px solid var(--gold);
   padding-left: 20px;
 }
 .stat .num {
@@ -517,8 +517,8 @@ section.alt {
   padding: 0;
 }
 .big-stat {
-  border-top: 2px solid var(--gold);
-  padding-top: 18px;
+  border-top: 4px solid var(--gold);
+  padding-top: 20px;
 }
 .big-stat .num {
   font-family: var(--font-serif);
@@ -558,8 +558,8 @@ section.alt {
   margin-top: 2.5em;
 }
 .trigger {
-  border-top: 2px solid var(--gold);
-  padding-top: 22px;
+  border-top: 4px solid var(--gold);
+  padding-top: 24px;
 }
 .trigger h3 {
   font-size: 1.15rem;
@@ -903,8 +903,10 @@ section.alt {
   cursor: pointer;
   list-style: none;
   font-family: var(--font-sans);
-  font-size: 0.95rem;
-  color: var(--navy);
+  font-size: 0.78rem;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--gold);
   font-weight: 700;
   display: inline-flex;
   align-items: center;

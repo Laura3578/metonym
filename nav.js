@@ -38,10 +38,34 @@
       });
     }
 
-    // === Nav-bar "For your team" dropdown auto-close ===
+    // === Nav-bar "We know your team" dropdown: hover-to-open + auto-close ===
     var navDropdown = document.querySelector('.nav-links .nav-dropdown');
     if (navDropdown) {
-      // Close on outside click
+      var closeTimer = null;
+      function clearCloseTimer() {
+        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+      }
+      function scheduleClose() {
+        clearCloseTimer();
+        closeTimer = setTimeout(function() { navDropdown.open = false; }, 180);
+      }
+      // Only enable hover on devices that actually hover (skip touch)
+      var canHover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+      if (canHover) {
+        navDropdown.addEventListener('mouseenter', function() {
+          clearCloseTimer();
+          navDropdown.open = true;
+        });
+        navDropdown.addEventListener('mouseleave', function() {
+          scheduleClose();
+        });
+        // Keep open while focused inside (keyboard nav)
+        navDropdown.addEventListener('focusin', clearCloseTimer);
+        navDropdown.addEventListener('focusout', function(e) {
+          if (!navDropdown.contains(e.relatedTarget)) scheduleClose();
+        });
+      }
+      // Close on outside click (still works alongside hover)
       document.addEventListener('click', function(e) {
         if (!navDropdown.open) return;
         if (navDropdown.contains(e.target)) return;
