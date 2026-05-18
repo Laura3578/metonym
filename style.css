@@ -149,13 +149,15 @@ a:hover { color: var(--gold-deep); }
   .brand-logo img { height: 48px; }
 }
 .brand .mark { color: var(--gold-deep); }
-.nav-links { display: flex; gap: 28px; align-items: center; width: 100%; }
+.nav-links { display: flex; gap: 32px; align-items: center; width: 100%; }
 .nav-links a {
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
   text-decoration: none;
-  color: var(--navy-soft);
-  font-weight: 500;
+  color: var(--navy);
+  font-weight: 700;
 }
 .nav-links a:hover { color: var(--gold-deep); }
 .nav-links .nav-cta {
@@ -215,8 +217,9 @@ a:hover { color: var(--gold-deep); }
 /* ---------- Section ---------- */
 section {
   padding: clamp(48px, 5.5vw, 76px) 0;
-  border-bottom: 1px solid var(--border-soft);
+  border-bottom: 2px solid var(--gold);
 }
+section:last-of-type { border-bottom: none; }
 section.alt {
   background: var(--cream);
 }
