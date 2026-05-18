@@ -169,7 +169,7 @@ a:hover { color: var(--gold-deep); }
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: clamp(28px, 4vw, 48px) 0 clamp(32px, 4.5vw, 56px);
+  padding: clamp(16px, 2.5vw, 32px) 0 clamp(28px, 4vw, 48px);
   border-bottom: 1px solid var(--border-soft);
 }
 .hero h1 { max-width: 18ch; margin-bottom: 0.6em; }
@@ -490,7 +490,7 @@ section.alt {
 
 /* ---------- Page hero (inner pages) ---------- */
 .page-hero {
-  padding: clamp(24px, 3.5vw, 44px) 0 clamp(24px, 4vw, 40px);
+  padding: clamp(12px, 2vw, 28px) 0 clamp(20px, 3.5vw, 36px);
   border-bottom: 1px solid var(--border-soft);
 }
 .page-hero .eyebrow { margin-bottom: 1.2em; }
@@ -902,8 +902,8 @@ section.alt {
   list-style: none;
   font-family: var(--font-sans);
   font-size: 0.95rem;
-  color: var(--navy-soft);
-  font-weight: 500;
+  color: var(--navy);
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: 4px;
