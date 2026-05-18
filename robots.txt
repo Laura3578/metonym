@@ -1,0 +1,6 @@
+# robots.txt for metonym.health
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://metonym.health/sitemap.xml
