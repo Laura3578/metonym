@@ -19,7 +19,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Metonym — Clinical evaluation for AI suicide risk detection</title>
-  <meta name="description" content="Metonym is a patent-pending clinical methodology for evaluating how AI systems detect — or fail to detect — suicide risk. Independent clinical audit, red-team, safety design, and expert review for AI mental health systems.">
+  <meta name="description" content="Patent-pending clinical evaluation for AI suicide-risk detection. Independent audit, red-team, and expert review for AI mental-health systems.">
   <meta name="robots" content="index,follow">
 
   <!-- Open Graph -->
@@ -136,10 +136,14 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <!-- Skip to main content (a11y) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+
   <!-- ============== Header (banner + sticky nav) ============== -->
   <header class="site-header">
     <a href="index.html" class="brand-banner" aria-label="Metonym home">
-      <img src="images/metonym-banner.svg" alt="Metonym — Clinical Intelligence for Safer AI">
+      <img src="images/metonym-banner.svg" alt="Metonym — Clinical Intelligence for Safer AI" width="1800" height="270">
     </a>
     <div class="nav-bar">
       <div class="container nav-wrap">
@@ -183,13 +187,16 @@
     </div>
   </header>
 
+  <main id="main-content">
+
   <!-- ============== Hero ============== -->
   <section class="hero">
     <div class="container">
-      <span class="hero-tag">Patent-Pending · Clinical AI Safety Evaluation</span>
+      <span class="hero-tag">Independent Clinical AI Evaluation · Patent-Pending</span>
       <h1>Find the suicide risk your AI is missing — before someone else does.</h1>
       <p class="lede hero-lede">
-        AI models have grown remarkably fluent at recognizing the explicit language of crisis. What they miss is subtle and more consequential: implicit signals an experienced clinician reads instinctively. Metonym is the patent-pending clinical evaluation framework built to surface what filters cannot see. Our research and methodology, across 31+ AI models, found these clinically meaningful moments fell through the cracks 57% of the time. Your product may hide a timebomb of liability and safety failures. We'll help you replace engineering tooling with the clinical confidence buyers and regulators now demand.
+        <strong>Metonym is the independent clinical evaluation framework for AI suicide-risk detection, producing regulator-, board-, and discovery-ready evidence that engineering safety tools cannot.</strong>
+        Across 31+ AI models tested, clinically meaningful moments fell through the cracks 57% of the time. We replace engineering tooling with the clinical confidence buyers, boards, and regulators now demand.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Book a 30-Min Scoping Call</a>
@@ -295,7 +302,7 @@
   <section id="about-preview">
     <div class="container">
       <div class="about-preview">
-        <img src="images/headshot.webp" alt="Dr. Laura L. Walsh" class="avatar-img">
+        <img src="images/headshot.webp" alt="Dr. Laura L. Walsh" class="avatar-img" width="1254" height="1254">
         <div>
           <p class="eyebrow">Founder</p>
           <h2>Dr. Laura L. Walsh, PsyD</h2>
@@ -471,6 +478,26 @@
     </div>
   </section>
 
+  <!-- ============== Discovery / liability panel ============== -->
+  <section class="alt" id="discovery">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">The Question Already Being Asked</p>
+        <h2>When discovery asks how your AI was clinically evaluated, what will you produce?</h2>
+        <p class="lede" style="max-width: 64ch;">
+          Garcia v. Character Technologies ruled the chatbot is a product, not protected speech. Five US states now require evidence of clinical safeguards for AI mental-health interactions. The EU AI Act high-risk obligations apply in 2026. "We had safety filters" is not the answer that holds up in front of a regulator, a board, or a wrongful-death plaintiff.
+        </p>
+        <p class="lede" style="max-width: 64ch; margin-top: 0.6em;">
+          A Metonym clinical evaluation is the artifact that does — a citable, dated, methodology-grounded record of how your system was tested against clinical bar.
+        </p>
+        <p style="margin-top: 1.6em;">
+          <a href="regulation.html" class="btn btn-secondary">See what regulators expect &rarr;</a>
+          <a href="what-you-get.html" class="btn btn-secondary" style="margin-left: 8px;">See the deliverable &rarr;</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- ============== Methodology summary (slim on homepage) ============== -->
   <section id="methodology">
     <div class="container">
@@ -581,23 +608,25 @@
         >
           <div class="field">
             <label for="f-name">Name</label>
-            <input type="text" id="f-name" name="name" required>
+            <input type="text" id="f-name" name="name" autocomplete="name" required>
           </div>
           <div class="field">
             <label for="f-org">Organization</label>
-            <input type="text" id="f-org" name="organization">
+            <input type="text" id="f-org" name="organization" autocomplete="organization">
           </div>
           <div class="field">
             <label for="f-role">Role / Title</label>
-            <input type="text" id="f-role" name="role">
+            <input type="text" id="f-role" name="role" autocomplete="organization-title">
           </div>
           <div class="field">
             <label for="f-email">Email</label>
-            <input type="email" id="f-email" name="email" required>
+            <input type="email" id="f-email" name="email" autocomplete="email" required>
+            <p class="field-help" style="font-size: 0.85rem; color: #4F5B6B; margin: 6px 0 0;">A business or institutional email helps us route your inquiry faster.</p>
           </div>
           <div class="field">
             <label for="f-type">What are you considering?</label>
-            <select id="f-type" name="inquiry_type">
+            <select id="f-type" name="inquiry_type" required>
+              <option value="" disabled selected>— Select an engagement type —</option>
               <option>Clinical Risk Review</option>
               <option>Failure-Mode & Red Team</option>
               <option>Safety Design & Co-Design Advisory</option>
@@ -610,6 +639,7 @@
           <div class="field">
             <label for="f-msg">Briefly describe your system and what you're trying to evaluate.</label>
             <textarea id="f-msg" name="message" required placeholder="What does your AI system do? Who interacts with it? What question are you trying to answer about its clinical safety?"></textarea>
+            <p class="field-help" style="font-size: 0.85rem; color: #4F5B6B; margin: 6px 0 0;">A few sentences is plenty. We will reply within two business days.</p>
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
           <p class="fallback">
@@ -621,11 +651,13 @@
   </section>
 
   <!-- ============== Footer ============== -->
+  </main>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="images/metonym-logo-dark.svg" alt="Metonym — Clinical Intelligence for Safer AI" class="footer-brand-logo">
+          <img src="images/metonym-logo-dark.svg" alt="Metonym — Clinical Intelligence for Safer AI" class="footer-brand-logo" width="1500" height="1500">
           <p class="footer-tag">
             Patent-pending clinical methodology for evaluating AI suicide risk detection systems.
           </p>

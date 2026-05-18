@@ -19,7 +19,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ — Metonym</title>
-  <meta name="description" content="Answers to the questions safety officers, GCs, and product leads ask before engaging Metonym for clinical evaluation of AI suicide risk detection systems.">
+  <meta name="description" content="What Metonym is, who we evaluate for, what engagements cost, and how the clinical methodology fits emerging AI mental-health regulation.">
   <meta name="robots" content="index,follow">
 
   <meta property="og:title" content="FAQ — Metonym">
@@ -37,6 +37,133 @@
   <meta name="twitter:description" content="What Metonym is, what we evaluate, what engagements cost, how long they take, and how the methodology fits emerging regulation.">
   <link rel="canonical" href="https://metonym.health/faq.html">
 
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "url": "https://metonym.health/faq.html",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Metonym, and what isn't it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Metonym is an independent clinical evaluation firm that assesses how AI systems handle conversations with users in acute psychological distress, using a patent-pending clinical methodology developed by a licensed clinical psychologist. Metonym does not build chatbots, fine-tune models, sell content moderation tools, or provide therapy to end users."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is this different from AI red-teaming or safety audits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Conventional AI red-teaming finds adversarial inputs and policy violations. Conventional safety audits measure response to flagged trigger words. Metonym evaluates whether the AI clinically recognizes the signals a therapist would notice. Across 31+ models, 57 percent of clinically meaningful moments were inadequately recognized."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is Metonym for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI Safety Officers and Trust and Safety leads at foundation model labs and mental-health-adjacent products; General Counsel and Risk officers preparing for regulatory inquiry, litigation discovery, or post-incident review; Product and Clinical leads at digital health companies; and regulators and standards bodies looking for a clinical reference framework."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does an engagement cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Engagement cost is set during a 30-minute scoping call after understanding the system, the volume of scenarios, and the depth of analysis required. Engagements range from fixed-scope Clinical Risk Reviews through multi-month Safety Design retainers and ongoing Expert Review support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a typical engagement take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Clinical Risk Review: 2-4 weeks. Failure-Mode and Red Team: 4-8 weeks. Safety Design and Co-Design Advisory: ongoing retainer with a minimum 3-month engagement. Expert Review and Incident Analysis: calibrated to inquiry or litigation timeline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the IP from an engagement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The client owns the engagement deliverable. Metonym retains all underlying IP in the methodology: the Salient Distress Model (openly published, CC-BY-NC 4.0 via Zenodo) and the Mechanical Severity Score scoring procedure (US Provisional Patent Application No. 64/059,837)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the engagement confidential?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Engagements operate under written confidentiality agreements that cover system internals, transcripts, findings, and the existence of the engagement itself if preferred. Metonym never publishes case studies, uses client logos, or references engagements publicly without explicit written consent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Metonym evaluation satisfy specific regulations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Metonym deliverables produce evaluation evidence. Whether that evidence satisfies a specific regulatory regime depends on the regime and deployment context. Metonym evaluation is designed to map to recurring regulatory frameworks including the FDA Clinical Decision Support Final Guidance, EU AI Act Annex III obligations, and state AI mental-health laws."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why a clinician instead of an engineering safety team?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Engineering safety teams are necessary but not sufficient. The signals that produce wrongful-death lawsuits, regulatory inquiries, and front-page stories are clinical signals, not policy-violation signals. They require clinical training to notice and clinical instruments to score reproducibly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you evaluate our system without us handing over the model?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Most Metonym engagements operate on the input/output surface: sending carefully constructed scenarios into the system and evaluating what comes back. Model weights, training data, or proprietary fine-tuning material are not needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the methodology proprietary, open, or both?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. The Salient Distress Model is openly published via Zenodo (DOI 10.5281/zenodo.20147000) under CC-BY-NC 4.0. The Mechanical Severity Score scoring procedure is patent-pending (US Provisional Application No. 64/059,837)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you handle bias and limitations in clinical evaluation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Metonym deliverables include explicit documentation of methodology limitations, sample-construction choices, and known evaluation blind spots. Metonym does not overclaim clinical certainty; the methodology asserts clinically defensible, reproducible, replicable evaluation and documents where the evaluation ends."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://metonym.health/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQ",
+        "item": "https://metonym.health/faq.html"
+      }
+    ]
+  }
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="images/metonym-favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,10 +177,14 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <!-- Skip to main content (a11y) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+
   <!-- ============== Header ============== -->
   <header class="site-header">
     <a href="index.html" class="brand-banner" aria-label="Metonym home">
-      <img src="images/metonym-banner.svg" alt="Metonym — Clinical Intelligence for Safer AI">
+      <img src="images/metonym-banner.svg" alt="Metonym — Clinical Intelligence for Safer AI" width="1800" height="270">
     </a>
     <div class="nav-bar">
       <div class="container nav-wrap">
@@ -96,6 +227,8 @@
       </div>
     </div>
   </header>
+
+  <main id="main-content">
 
   <!-- ============== Page Hero ============== -->
   <section class="page-hero">
@@ -290,11 +423,13 @@
   </section>
 
   <!-- ============== Footer ============== -->
+  </main>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="images/metonym-logo-dark.svg" alt="Metonym — Clinical Intelligence for Safer AI" class="footer-brand-logo">
+          <img src="images/metonym-logo-dark.svg" alt="Metonym — Clinical Intelligence for Safer AI" class="footer-brand-logo" width="1500" height="1500">
           <p class="footer-tag">
             Patent-pending clinical methodology for evaluating AI suicide risk detection systems.
           </p>

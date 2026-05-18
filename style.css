@@ -71,7 +71,7 @@ a:hover { color: var(--gold-deep); }
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--gold-deep);
+  color: #6E5320; /* gold-darkened for WCAG AA contrast on ivory */
   margin: 0 0 1.1em;
   font-weight: 500;
 }
@@ -408,9 +408,13 @@ section.alt {
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
-  outline: none;
   border-color: var(--navy);
   background: var(--white);
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #5A6B7E; /* darkened from default for WCAG AA contrast */
+  opacity: 1; /* Firefox defaults to 0.54; force full opacity */
 }
 .fallback {
   margin-top: 14px;
@@ -1104,4 +1108,67 @@ a.service-card:hover {
   border-color: var(--gold);
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(15, 42, 68, 0.06);
+}
+
+/* ---------- Accessibility: skip link ---------- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 8px;
+  background: var(--navy);
+  color: var(--ivory);
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.15s ease;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 8px;
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+  color: var(--ivory);
+}
+
+/* ---------- Accessibility: high-contrast focus indicators ---------- */
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+.nav-links a:focus-visible,
+.nav-hamburger:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  color: var(--gold-deep);
+}
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+  border-color: var(--navy);
+  background: var(--white);
+}
+.btn:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ---------- Accessibility: reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
