@@ -172,7 +172,7 @@ a:hover { color: var(--gold-deep); }
 /* ---------- Hero ---------- */
 .hero {
   padding: clamp(16px, 2.5vw, 32px) 0 clamp(28px, 4vw, 48px);
-  border-bottom: 1px solid var(--border-soft);
+  /* border-bottom inherits from generic `section` rule for consistency */
 }
 .hero h1 { max-width: 18ch; margin-bottom: 0.6em; }
 .hero .hero-lede { max-width: 56ch; }
@@ -217,7 +217,7 @@ a:hover { color: var(--gold-deep); }
 /* ---------- Section ---------- */
 section {
   padding: clamp(48px, 5.5vw, 76px) 0;
-  border-bottom: 2px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
 }
 section:last-of-type { border-bottom: none; }
 section.alt {
@@ -494,7 +494,7 @@ section.alt {
 /* ---------- Page hero (inner pages) ---------- */
 .page-hero {
   padding: clamp(12px, 2vw, 28px) 0 clamp(20px, 3.5vw, 36px);
-  border-bottom: 1px solid var(--border-soft);
+  /* border-bottom inherits from generic `section` rule for consistency */
 }
 .page-hero h1 { max-width: 22ch; margin-bottom: 0.5em; }
 .page-hero .lede { max-width: 56ch; }
@@ -950,6 +950,8 @@ section.alt {
   color: var(--navy-soft);
   font-size: 0.92rem;
   font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
   transition: background 0.12s ease, color 0.12s ease;
 }
 .nav-links .nav-dropdown-menu a:hover {
