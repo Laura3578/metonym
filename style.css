@@ -26,7 +26,7 @@
 
   /* Spacing */
   --max-width:    1120px;
-  --max-prose:    680px;
+  --max-prose:    620px;
   --radius:       4px;
 }
 
@@ -493,6 +493,8 @@ section.alt {
   padding: clamp(12px, 2vw, 28px) 0 clamp(20px, 3.5vw, 36px);
   border-bottom: 1px solid var(--border-soft);
 }
+.page-hero h1 { max-width: 22ch; margin-bottom: 0.5em; }
+.page-hero .lede { max-width: 56ch; }
 .page-hero .eyebrow { margin-bottom: 1.2em; }
 
 /* ---------- Mobile nav (simple) ---------- */
