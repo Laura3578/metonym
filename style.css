@@ -355,6 +355,7 @@ section.alt {
 .avatar-img {
   display: block;
   width: 100%;
+  height: auto; /* override HTML height="1254" attr so aspect-ratio wins */
   max-width: 280px;
   aspect-ratio: 1;
   object-fit: cover;
